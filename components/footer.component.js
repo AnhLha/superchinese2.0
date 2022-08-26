@@ -1,7 +1,8 @@
 import { memo } from "react"
-import styles from "../assets/styles/footer.module.css"
+import styles from "../assets/styles/footer.module.scss"
 import Image from 'next/image'
 import Announced from '../assets/images/announced.png'
+import footerConstants from "../constant/footer.constant"
 
 const Footer = () => {
     return (
@@ -12,20 +13,44 @@ const Footer = () => {
                     <div className={styles.container}>
                         <div className={styles.row}>
                             <div className={styles.col_item}>
-
+                                <a href="/ky-thi-hsk-la-gi" title={footerConstants.kithihsk}>
+                                    {footerConstants.kithihsk}
+                                </a>
                             </div>
                             <div className={styles.col_item}>
-
+                                <a href="/thi-thu-hsk" title={footerConstants.dethihsk}>
+                                    {footerConstants.dethihsk}
+                                </a>
                             </div>
                             <div className={styles.col_item}>
-
+                                <a href="https://hanban.vn/" title={footerConstants.thuvien}>
+                                    {footerConstants.thuvien}
+                                </a>
                             </div>
                             <div className={styles.col_item}>
-
+                                <a href="https://hanban.vn/" title={footerConstants.blog}>
+                                    {footerConstants.blog}
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div className={styles.container}></div>
+                    <div className={styles.container}>
+                        <div className={styles.row}>
+                            <div className={styles.col_content}>
+
+                            </div>
+                            <div className={styles.col_content}>
+
+                            </div>
+                            <div className={styles.col_content}>
+
+                            </div>
+                            <div className={styles.col_content}>
+
+                            </div>
+                        </div>
+
+                    </div>
                     <span className={styles.logo}>
                         <Image src={Announced}
                             alt="Đã thông báo với bộ công thương"
@@ -39,7 +64,7 @@ const Footer = () => {
                     <div className={styles.container}>
                         <div className={styles.copyright}>
                             <span>
-                                Konec Co., Ltd - ĐKKD số 0108146759 - Ngày đăng ký: 27/01/2018 - Trụ sở: Đông Mỹ - Thanh Trì - Hà Nội - Người đại diện: Nguyễn Thu Hà{' '}
+                                {footerConstants.copyrightby}{' '}
                             </span>
                         </div>
                     </div>
