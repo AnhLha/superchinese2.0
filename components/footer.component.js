@@ -1,10 +1,12 @@
 import { memo } from "react"
 import styles from "../assets/styles/footer.module.scss"
 import Image from 'next/image'
+import Link from 'next/link'
 import Announced from '../assets/images/announced.png'
-import footerConstants from "../constant/footer.constant"
+import {useTranslation} from 'react-i18next'
 
 const Footer = () => {
+    const { t, i18n } = useTranslation();
     return (
         <>
             <div ></div>
@@ -13,24 +15,24 @@ const Footer = () => {
                     <div className={styles.container}>
                         <div className={styles.row}>
                             <div className={styles.col_item}>
-                                <a href="/ky-thi-hsk-la-gi" title={footerConstants.kithihsk}>
-                                    {footerConstants.kithihsk}
-                                </a>
+                                <Link href="/ky-thi-hsk-la-gi">
+                                    {t('footer.kithihsk')}
+                                </Link>
                             </div>
                             <div className={styles.col_item}>
-                                <a href="/thi-thu-hsk" title={footerConstants.dethihsk}>
-                                    {footerConstants.dethihsk}
-                                </a>
+                                <Link href="/thi-thu-hsk">
+                                {t('footer.dethihsk')}
+                                </Link>
                             </div>
                             <div className={styles.col_item}>
-                                <a href="https://hanban.vn/" title={footerConstants.thuvien}>
-                                    {footerConstants.thuvien}
-                                </a>
+                                <Link href="https://hanban.vn/">
+                                {t('footer.thuvien')}
+                                </Link>
                             </div>
                             <div className={styles.col_item}>
-                                <a href="https://hanban.vn/" title={footerConstants.blog}>
-                                    {footerConstants.blog}
-                                </a>
+                                <Link href="https://hanban.vn/">
+                                {t('footer.blog')}
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -64,7 +66,7 @@ const Footer = () => {
                     <div className={styles.container}>
                         <div className={styles.copyright}>
                             <span>
-                                {footerConstants.copyrightby}{' '}
+                            {t('footer.copyrightby')}{' '}
                             </span>
                         </div>
                     </div>
