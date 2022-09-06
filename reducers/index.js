@@ -4,7 +4,7 @@ import goivipsuperchineseReducer from "./goi-vip-superchinese.reducer";
 import kythihsklagiReducer from './ky-thi-hsk-la-gi.reducer';
 
 export default combineReducers({
-    index:indexReducer,
+    indexReducer:indexReducer,
     goivipsuperchinese: goivipsuperchineseReducer,
     kythihsklagi:kythihsklagiReducer
 });

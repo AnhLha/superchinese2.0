@@ -1,7 +1,6 @@
 import React from 'react'
 import '../assets/globals.css'
-import Header from "../components/header.component"
-import Footer from "../components/footer.component"
+import {Header, Footer} from "../components/index"
 import createSagaMiddleware from 'redux-saga'
 import {createStore, applyMiddleware} from 'redux'
 import rootReducer from '../reducers/index'
