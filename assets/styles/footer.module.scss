@@ -118,9 +118,24 @@ $myWidth:80%;
     box-shadow: none;
     color: #FFFFFF;
     flex: 1 0 0%;
-    border-width: 3px;
-    border-style: solid;
-    margin:10px;
+    margin-left:10px;
+    display: flex;
+    flex-direction: column;
+    .col_content_item{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15px;
+        align-items: center;
+        .item_content{
+            margin-left: 5px;
+        }
+        .item_point{
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            background: white;
+        }
+    }
 }
 
 
