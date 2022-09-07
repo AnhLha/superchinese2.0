@@ -1,6 +1,6 @@
 import React from 'react'
 import '../assets/globals.css'
-import {Header, Footer} from "../components/index"
+import {Header, Footer, IconFixed} from "../components/index"
 import createSagaMiddleware from 'redux-saga'
 import {createStore, applyMiddleware} from 'redux'
 import rootReducer from '../reducers/index'
@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <React.Suspense fallback={<div>Loading...</div>}>
       <Header/>
+      <IconFixed/>
       <Component {...pageProps} />
       <Footer/>
     </React.Suspense>
