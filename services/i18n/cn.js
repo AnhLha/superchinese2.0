@@ -28,6 +28,11 @@ const cn={
             hsk9cap: "HSK 9 Cấp",
             muagoivip: "Mua gói VIP",
             chinhhang: "Chính hãng",
+            kythihsklagi:"Kỳ thi HSK là gì?",
+            thithuhsk: "Thi thử HSK",
+            taixuongsuperchinese:"Tải xuống Super Chinese",
+            taixuongsupertest: "Tải xuống Super Test",
+            kichhoatvip: "Kích hoạt VIP"
         }
     }
 }
