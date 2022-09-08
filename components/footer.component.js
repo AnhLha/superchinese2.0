@@ -11,6 +11,24 @@ import fbImg from "../assets/images/fb.png"
 
 const Footer = () => {
     const { t, i18n } = useTranslation();
+    const clickFooter = (item) => {
+        switch (item) {
+            case "kithihsk":
+                console.log("click kithihsk")
+                return 1;
+            case "dethihsk":
+                console.log("click dethihsk")
+                return 1;
+            case "dieukhoansudung":
+                console.log("click dieukhoansudung")
+                return 1;
+            case "chinhsachbaomat":
+                console.log("click chinhsachbaomat")
+                return 1;
+            default:
+                break;
+        }
+    }
     return (
         <>
             <div ></div>
@@ -72,42 +90,46 @@ const Footer = () => {
                                 <h3>
                                     {t('footer.kythi')}
                                 </h3>
-                                <div className={styles.col_content_item}>
+                                <div className={styles.col_content_item} onClick={() => { clickFooter("kithihsk") }}>
                                     <Image src={locImg} />
                                     <div className={styles.item_content}>
                                         {t('footer.kithihsk')}
                                     </div>
                                 </div>
-                                <div className={styles.col_content_item}>
+                                <div className={styles.col_content_item} onClick={() => { clickFooter("dethihsk") }}>
                                     <Image src={emailImg} />
                                     <div className={styles.item_content}>
                                         {t('footer.dethihsk')}
                                     </div>
                                 </div>
-                                <div className={styles.col_content_item}>
-                                    <Image src={sdtImg} />
-                                    <div className={styles.item_content}>
-                                        {t('footer.thuvien')}
+                                <Link href="https://hanban.vn/">
+                                    <div className={styles.col_content_item}>
+                                        <Image src={sdtImg} />
+                                        <div className={styles.item_content}>
+                                            {t('footer.thuvien')}
+                                        </div>
                                     </div>
-                                </div>
-                                <div className={styles.col_content_item}>
-                                    <Image src={fbImg} />
-                                    <div className={styles.item_content}>
-                                        {t('footer.blog')}
+                                </Link>
+                                <Link href="https://hanban.vn/">
+                                    <div className={styles.col_content_item}>
+                                        <Image src={fbImg} />
+                                        <div className={styles.item_content}>
+                                            {t('footer.blog')}
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className={styles.col_content}>
                                 <h3>
                                     {t('footer.dieukhoan')}
                                 </h3>
-                                <div className={styles.col_content_item}>
+                                <div className={styles.col_content_item} onClick={() => { clickFooter("dieukhoansudung") }}>
                                     <div className={styles.item_point}></div>
                                     <div className={styles.item_content}>
                                         {t('footer.dieukhoansudung')}
                                     </div>
                                 </div>
-                                <div className={styles.col_content_item}>
+                                <div className={styles.col_content_item} onClick={() => { clickFooter("chinhsachbaomat") }}>
                                     <div className={styles.item_point}></div>
                                     <div className={styles.item_content}>
                                         {t('footer.chinhsachbaomat')}
@@ -115,7 +137,7 @@ const Footer = () => {
                                 </div>
 
                             </div>
-                            <div className={styles.col_content}>
+                            <div className={styles.col_content} >
                                 <h3>
                                     {t('footer.lienhe')}
                                 </h3>
