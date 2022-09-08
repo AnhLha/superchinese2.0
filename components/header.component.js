@@ -4,7 +4,40 @@ import Image from 'next/image'
 import { memo } from 'react'
 import styles from '../assets/styles/header.module.scss'
 import Logo from '../assets/images/logo.png'
+import { useTranslation } from 'react-i18next'
 const Header = () => {
+    const { t, i18n } = useTranslation();
+    const clickManuHeader = (item) => {
+        switch (item) {
+            case "trangchu":
+                console.log("click trang chu")
+                break;
+            case "superchines":
+                console.log("click superchines")
+                break;
+            case "supertest":
+                console.log("click supertest")
+                break;
+            case "muagoivip":
+                console.log("click muagoivip")
+                break;
+            case "kythihsklagi":
+                console.log("click kythihsklagi")
+                break;
+            case "thithuhsk":
+                console.log("click thithuhsk")
+                break;
+            case "taixuongsuperchinese":
+                console.log("click taixuongsuperchinese")
+                break;
+            case "taixuongsupertest":
+                console.log("click taixuongsupertest")
+                break;
+            case "kichhoatvip":
+                console.log("click kichhoatvip")
+                break;
+        }
+    }
     return (
         <>
             <Head>
@@ -13,33 +46,79 @@ const Header = () => {
                 <link rel="icon" href="../assets/images/supperchinese.svg" />
             </Head>
             <header>
-            <div className={styles.header}>
-                    <div className={styles.container_icon}> 	
-                        <Image  src={Logo}
-                                    height={0}
-                                    width={-0}
-                                    target="_blank"
-                                    rel="noopener noreferrer"/>
-                    </div>
-                    <div className={styles.container_menu}>
-                    <div className={styles.row}>
-                            <div className={styles.col_content}>
-
-                            </div>
-                            <div className={styles.col_content}>
-
-                            </div>
-                            <div className={styles.col_content}>
-
+                <div className={styles.headerparent}>
+                    <div className={styles.header}>
+                        <div className={styles.container_icon}>
+                            <Image src={Logo}
+                                height={0}
+                                width={0}
+                                target="_blank"
+                                rel="noopener noreferrer" />
+                        </div>
+                        <div className={styles.container_menu}>
+                            <div className={styles.row}>
+                                <div className={styles.col_content} onClick={() => { clickManuHeader("trangchu") }}>
+                                    <div className={styles.col_content_content}>
+                                        <div className={styles.col_content_upper}>
+                                            {t('header.trangchu')}
+                                        </div>
+                                        <div className={styles.col_content_lower}>
+                                            {t('header.phanphoichinhhang')}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.col_content} onClick={() => { clickManuHeader("superchines") }}>
+                                    <div className={styles.col_content_content}>
+                                        <div className={styles.col_content_upper}>
+                                            {t('header.superchinese')}
+                                        </div>
+                                        <div className={styles.col_content_lower}>
+                                            {t('header.learntoearn')}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.col_content} onClick={() => { clickManuHeader("supertest") }}>
+                                    <div className={styles.col_content_content}>
+                                        <div className={styles.col_content_upper}>
+                                            {t('header.supertest')}
+                                        </div>
+                                        <div className={styles.col_content_lower}>
+                                            {t('header.hsk9cap')}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
+                                    <div className={styles.col_content_content}>
+                                        <div className={styles.col_content_upper}>
+                                            {t('header.muagoivip')}
+                                        </div>
+                                        <div className={styles.col_content_lower}>
+                                            {t('header.chinhhang')}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        {/* <div className={styles.copyright}>
-                            <span>
-                            This is header
-                            </span>
-                        </div> */}
+                    </div>
+                    <div className={styles.header_below}>
+                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("kythihsklagi") }}>
+                            {t('header.kythihsklagi')}
+                        </div>
+                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("thithuhsk") }}>
+                            {t('header.thithuhsk')}
+                        </div>
+                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsuperchinese") }}>
+                            {t('header.taixuongsuperchinese')}
+                        </div>
+                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsupertest") }}>
+                            {t('header.taixuongsupertest')}
+                        </div>
+                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("kichhoatvip") }}>
+                            {t('header.kichhoatvip')}
+                        </div>
                     </div>
                 </div>
+
             </header>
         </>
     )
