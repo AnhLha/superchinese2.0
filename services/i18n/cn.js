@@ -33,6 +33,23 @@ const cn={
             taixuongsuperchinese:"Tải xuống Super Chinese",
             taixuongsupertest: "Tải xuống Super Test",
             kichhoatvip: "Kích hoạt VIP"
+        },
+        superchinese: {
+            titleTopBanner:"EXPERTLY CRAFTED FOR YOUR SUCCESS",
+            buttonTopBanner:"Tải ứng dụng",
+            titleBig:"Super Chinese sử dụng công nghệ AI tiên tiến để phù hợp với phong cách học tập cá nhân của bạn. Các bài học được rút ra từ nhiều chủ đề thực tế, được sắp xếp và trình bày theo cách phù hợp.",
+            titleSmall:"Đừng lo lắng nếu bạn hay quên, Super Chinese sẽ làm giúp bạn điều đó.",
+            bottomTitle:"Tải ứng dụng",
+            itemTitle1:"Kiểm tra trình độ bằng AI",
+            itemSubTitle1:"Một cách độc đáo để biết chính xác trình độ tiếng Trung của bạn. Tùy chỉnh trải nghiệm học tập của bạn để giúp bạn nâng cao trình độ nhanh nhất.",
+            itemTitle2:"Bài học theo thời lượng",
+            itemSubTitle2:"Thời điểm học tập linh hoạt tùy theo lịch trình hàng ngày của bạn. Mỗi bài học chỉ điễn ra 15 đến 30 phút mỗi ngày, hãy duy trì đều đặn.",   
+            itemTitle3:"Nhận dạng giọng nói",
+            itemSubTitle3:"Giúp bạn luyện nói như người bản xứ. Phát âm các từ đúng giọng và hiểu ý nghĩa ngữ cảnh của chúng trong các cuộc trò chuyện hàng ngày.",   
+            itemTitle4:"Chủ đề sống động",
+            itemSubTitle4:"Hiểu về ngữ cảnh nhanh hơn với sự trợ giúp của video hoạt hình và câu chuyện trực quan. Giúp bạn dễ dàng ghi nhớ từ đã học.",    
+            itemTitle5:"Nội dung chất lượng",
+            itemSubTitle5:"Một cách độc đáo để biết chính xác trình độ tiếng Trung của bạn. Tùy chỉnh trải nghiệm học tập của bạn để giúp bạn nâng cao trình độ nhanh nhất.",  
         }
     }
 }
