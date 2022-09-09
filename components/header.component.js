@@ -1,6 +1,7 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { memo } from 'react'
 import styles from '../assets/styles/header.module.scss'
 import Logo from '../assets/images/logo.png'
@@ -57,7 +58,10 @@ const Header = () => {
                         </div>
                         <div className={styles.container_menu}>
                             <div className={styles.row}>
-                                <div className={styles.col_content} onClick={() => { clickManuHeader("trangchu") }}>
+                                <Link href={{
+                                    pathname:"/"
+                                }}>
+                                    <div className={styles.col_content} onClick={() => { clickManuHeader("trangchu") }}>
                                     <div className={styles.col_content_content}>
                                         <div className={styles.col_content_upper}>
                                             {t('header.trangchu')}
@@ -67,6 +71,7 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </div>
+                                </Link>
                                 <div className={styles.col_content} onClick={() => { clickManuHeader("superchines") }}>
                                     <div className={styles.col_content_content}>
                                         <div className={styles.col_content_upper}>
