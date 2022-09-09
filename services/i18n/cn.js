@@ -49,7 +49,20 @@ const cn={
             itemTitle4:"Chủ đề sống động",
             itemSubTitle4:"Hiểu về ngữ cảnh nhanh hơn với sự trợ giúp của video hoạt hình và câu chuyện trực quan. Giúp bạn dễ dàng ghi nhớ từ đã học.",    
             itemTitle5:"Nội dung chất lượng",
-            itemSubTitle5:"Một cách độc đáo để biết chính xác trình độ tiếng Trung của bạn. Tùy chỉnh trải nghiệm học tập của bạn để giúp bạn nâng cao trình độ nhanh nhất.",  
+            itemSubTitle5:"Một cách độc đáo để biết chính xác trình độ tiếng Trung của bạn. Tùy chỉnh trải nghiệm học tập của bạn để giúp bạn nâng cao trình độ nhanh nhất.",    
+            itemTitle6:"",
+            itemSubTitle6:"",  
+        },
+        goiVipSuperChinese: {
+            title: "Chào mừng bạn đến với superchinese.vn, hãy đăng nhập để mua gói VIP!",
+            titleSuper:"Mở khoá tất cả các bài tập học và luyện tập không giới hạn cấp độ",
+            subtitle1Super:"Super Chinese",
+            subtitle2Super:"Tiếng Quan thoại",
+            subtitle3Super:"PLUS",
+            titleTest:"Mở khoá tất cả các bài tập học và luyện tập không giới hạn cấp độ",
+            subtitle1Test:"Super Test",
+            subtitle2Test:"HSK Online",
+            subtitle3Test:"VIP",
         }
     }
 }
