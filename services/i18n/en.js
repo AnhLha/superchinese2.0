@@ -63,6 +63,10 @@ const en={
             subtitle1Test:"Super Test",
             subtitle2Test:"HSK Online",
             subtitle3Test:"VIP",
+            order: "Đơn hàng",
+            studentDiscount: "Ưu đãi cho sinh viên",
+            purchase: "Mua hàng",
+            total: "Tổng cộng",
         }
     }
 }

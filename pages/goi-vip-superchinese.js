@@ -1,18 +1,45 @@
-import { memo, useMemo } from "react";
+import { memo, useMemo, useCallback } from "react";
 import styles from '../assets/styles/goiVipSuperChinese.module.scss';
 import { useTranslation } from 'react-i18next'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { goivipsuperchineseAction } from "../actions";
+import { goiVipChineseConst } from "../constants";
 
 const GoiVipSuperchinese = () => {
     const { t, i18n } = useTranslation();
 
     const { superChinese, superTest, selectedCourse } = useSelector(state => state.goivipsuperchinese);
 
+    const dispatch = useDispatch();
+
+    const chooseCourse = useCallback((courseId) => {
+        console.log(courseId, selectedCourse);
+        const tSelectedCourse = null;
+        let resChinese = superChinese.some((item) => {
+            if (item.id == courseId) {
+                tSelectedCourse = item;
+                return true;
+            }
+        });
+        let resTest = superTest.some((item) => {
+            if (item.id == courseId) {
+                tSelectedCourse = item;
+                return true;
+            }
+        });
+        tSelectedCourse.img = resChinese ? goiVipChineseConst.URL_SUPERCHINESE : goiVipChineseConst.URL_SUPERTEST;
+        tSelectedCourse.text = resChinese ? i18n.t('goiVipSuperChinese.subtitle1Super') : i18n.t('goiVipSuperChinese.subtitle1Test');
+        if(selectedCourse && selectedCourse.id == courseId){
+            tSelectedCourse = null;
+        }
+        dispatch({ type: goivipsuperchineseAction.SET_COURSE, data: tSelectedCourse });
+    }, [selectedCourse, superChinese, superTest])
+
     const superChineseList = useMemo(() => {
         return (
             <div className={styles.goiVip_container_course_list}>
                 <div className={styles.goiVip_container_course_item}>
-                    <img src="https://superchinese.vn/images/supperchinese.svg"></img>
+                    <img src={goiVipChineseConst.URL_SUPERCHINESE}></img>
                     <div className={styles.goiVip_container_course_item_title}>{t('goiVipSuperChinese.titleSuper')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle1}>{t('goiVipSuperChinese.subtitle1Super')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle2}>{t('goiVipSuperChinese.subtitle2Super')}</div>
@@ -21,9 +48,11 @@ const GoiVipSuperchinese = () => {
                 {
                     superChinese ?
                         superChinese.map((item, index) => {
-                            return (<div className={styles.goiVip_container_course_item} key={index}>
-                                <div className={styles.goiVip_container_course_item_select}>
-                                    <img className={styles.unchecked} src="https://superchinese.vn/images/unchecked.svg"></img>
+                            const border = selectedCourse && item.id == selectedCourse.id ? `${styles.goiVip_container_course_item_select} ${styles.goivip_selected}` : `${styles.goiVip_container_course_item_select}`;
+                            const checked = selectedCourse && item.id == selectedCourse.id ? goiVipChineseConst.URL_SUPERCHINESE_CHECKED : goiVipChineseConst.URL_UNCHECKED;
+                            return (<div className={styles.goiVip_container_course_item} key={index} onClick={() => chooseCourse(item.id)}>
+                                <div className={border}>
+                                    <img className={styles.unchecked} src={checked}></img>
                                     <div className={styles.time}>
                                         <span>{item.title}</span>
                                         {
@@ -36,7 +65,7 @@ const GoiVipSuperchinese = () => {
                                         {" " + item.unitPrice}
                                     </div>
                                 </div>
-                                <div className={styles.goiVip_container_course_item_buyer}>
+                                <div className={`${styles.goiVip_container_course_item_buyer} ${styles.purchase}`}>
                                     <span>{item.numberSold}</span>
                                     {" " + item.unitNumberSold}
                                 </div>
@@ -47,13 +76,13 @@ const GoiVipSuperchinese = () => {
                 }
             </div>
         )
-    }, [superChinese])
+    }, [superChinese, selectedCourse])
 
     const superTestList = useMemo(() => {
         return (
             <div className={`${styles.goiVip_container_course_list} ${styles.goiVip_container_super_test}`}>
                 <div className={styles.goiVip_container_course_item}>
-                    <img className={styles.unchecked} src="https://superchinese.vn/images/suppertest2.svg"></img>
+                    <img className={styles.unchecked} src={goiVipChineseConst.URL_SUPERTEST}></img>
                     <div className={styles.goiVip_container_course_item_title}>{t('goiVipSuperChinese.titleTest')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle1}>{t('goiVipSuperChinese.subtitle1Test')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle2}>{t('goiVipSuperChinese.subtitle2Test')}</div>
@@ -62,9 +91,11 @@ const GoiVipSuperchinese = () => {
                 {
                     superTest ?
                         superTest.map((item, index) => {
-                           return (<div className={styles.goiVip_container_course_item} key={index}>
-                                <div className={styles.goiVip_container_course_item_select}>
-                                    <img className={styles.unchecked} src="https://superchinese.vn/images/unchecked.svg"></img>
+                            const border =  selectedCourse && item.id == selectedCourse.id ? `${styles.goiVip_container_course_item_select} ${styles.goivip_selected}` : `${styles.goiVip_container_course_item_select}`;
+                            const checked = selectedCourse && item.id == selectedCourse.id ? goiVipChineseConst.URL_SUPERTEST_CHECKED : goiVipChineseConst.URL_UNCHECKED;
+                            return (<div className={styles.goiVip_container_course_item} key={index} onClick={() => chooseCourse(item.id)}>
+                                <div className={border}>
+                                    <img className={styles.unchecked} src={checked}></img>
                                     <div className={styles.time}>
                                         <span>{item.title}</span>
                                         {
@@ -88,7 +119,51 @@ const GoiVipSuperchinese = () => {
                 }
             </div>
         )
-    }, [superTest])
+    }, [superTest, selectedCourse])
+
+    const purchaseDiv = useMemo(() => {
+        return (
+            <>
+                {
+                    selectedCourse ?
+                        <div className={styles.purchase}>
+                            <div className={styles.purchase_container}>
+                                <div className={styles.purchase_container_order}>{t('goiVipSuperChinese.order')}</div>
+                                <div className={styles.purchase_container_select}>
+                                    <div className={styles.title_item}>
+                                        <img src={selectedCourse.img}></img>
+                                        {selectedCourse.text}
+                                    </div>
+                                    <div className={styles.item}>
+                                        <div className={styles.time}>
+                                            <span>{selectedCourse.title}</span>
+                                            {" " + selectedCourse.unitTitle}
+                                        </div>
+                                        <div className={styles.price}>
+                                            <span>{selectedCourse.price}</span>
+                                            {" " + selectedCourse.unitPrice}
+                                        </div>
+                                    </div>
+                                    <a href={goiVipChineseConst.URL_DISCOUNT}><div className={`${styles.discountbuyer} ${styles.discount}`}>{t('goiVipSuperChinese.studentDiscount')}</div></a>
+                                </div>
+                                <div className={styles.purchase_container_select}>
+                                    <div className={styles.title_total}>{t('goiVipSuperChinese.total')}</div>
+                                    <div className={`${styles.item} ${styles.price_total}`}>
+                                        <div className={styles.price}>
+                                            <span className={styles.red}>{selectedCourse.price}</span>
+                                            {" " + selectedCourse.unitPrice}
+                                        </div>
+                                    </div>
+                                    <div className={`${styles.discountbuyer} ${styles.purchase}`}>{t('goiVipSuperChinese.purchase')}</div>
+                                </div>
+                            </div>
+                        </div>
+                        :
+                        null
+                }
+            </>
+        )
+    }, [selectedCourse]);
 
     return (
         <div className={styles.goiVip_container}>
@@ -101,12 +176,7 @@ const GoiVipSuperchinese = () => {
                     {superTestList}
                 </div>
             </div>
-            {
-                selectedCourse ?
-                    null
-                    :
-                    null
-            }
+            {purchaseDiv}
         </div>
     )
 }

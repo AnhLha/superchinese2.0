@@ -17,6 +17,7 @@ $myWidth:80%;
     display: flex;
     flex-wrap: wrap;
     .col_item{
+        padding: 7px 0px;
         &:nth-child(1){
             a{
                 &:after{
@@ -26,7 +27,7 @@ $myWidth:80%;
                     background: url("https://superchinese.vn/images/course.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }
@@ -39,7 +40,7 @@ $myWidth:80%;
                     background: url("https://superchinese.vn/images/exam.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }
@@ -52,7 +53,7 @@ $myWidth:80%;
                     background: url("https://superchinese.vn/images/library.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }
@@ -65,7 +66,7 @@ $myWidth:80%;
                     background: url("https://superchinese.vn/images/blog.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }

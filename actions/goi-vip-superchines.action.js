@@ -1,5 +1,6 @@
 const goivipsuperchineseAction = {
-    SOMEACTION : "SOMEACTION"
+    SOMEACTION : "SOMEACTION",
+    SET_COURSE : "SET_COURSE"
 }
 
 export default goivipsuperchineseAction;

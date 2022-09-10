@@ -1,4 +1,4 @@
-import goivipsuperchinese from "../actions/goi-vip-superchines.action"
+import {goivipsuperchineseAction} from "../actions"
 
 const initState = {
     loading: false,
@@ -10,7 +10,7 @@ const initState = {
         unitPrice: "vnđ",
         numberSold: "13.523",
         unitNumberSold: "người đã mua",
-    },{
+    }, {
         id: "c2",
         title: "1",
         unitTitle: "năm",
@@ -36,7 +36,7 @@ const initState = {
         unitPrice: "vnđ",
         numberSold: "11.258",
         unitNumberSold: "người đã mua",
-    },{
+    }, {
         id: "t2",
         title: "1",
         unitTitle: "năm",
@@ -58,8 +58,10 @@ const initState = {
 
 const goiVipsuperchineseReducer = (state = initState, action) => {
     switch (action.type) {
-        case goivipsuperchinese.SOMEACTION:
+        case goivipsuperchineseAction.SOMEACTION:
             return state;
+        case goivipsuperchineseAction.SET_COURSE: 
+            return { ...state, ...{ selectedCourse: action.data } };
         case '1':
             return state;
         default:
