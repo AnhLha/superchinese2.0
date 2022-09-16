@@ -129,6 +129,10 @@ $myWidth:80%;
         align-items: center;
         .item_content{
             margin-left: 5px;
+            cursor: pointer;
+            &:hover{
+                color: rgb(237, 87, 35)
+            }
         }
         .item_point{
             border-radius: 50%;

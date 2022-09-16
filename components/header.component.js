@@ -130,13 +130,17 @@ const Header = () => {
                         <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsupertest") }}>
                             {t('header.taixuongsupertest')}
                         </div>
-                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("kichhoatvip") }}>
+                        <div className={`${styles.header_below_item} ${styles.active_color}`} onClick={() => { clickManuHeader("kichhoatvip") }}>
                             {t('header.kichhoatvip')}
                         </div>
                     </div>
                 </div>
 
             </header>
+
+            <div>
+                
+            </div>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import { memo, useMemo, useCallback } from "react";
+import { memo, useMemo, useCallback, useRef, useEffect } from "react";
 import styles from '../assets/styles/goiVipSuperChinese.module.scss';
 import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from "react-redux";
@@ -10,10 +10,15 @@ const GoiVipSuperchinese = () => {
 
     const { superChinese, superTest, selectedCourse } = useSelector(state => state.goivipsuperchinese);
 
+    const selecCourseDiv = useRef(null);;
+
+    useEffect(() => {
+
+    }, [selecCourseDiv]);
+
     const dispatch = useDispatch();
 
     const chooseCourse = useCallback((courseId) => {
-        console.log(courseId, selectedCourse);
         const tSelectedCourse = null;
         let resChinese = superChinese.some((item) => {
             if (item.id == courseId) {
@@ -29,8 +34,13 @@ const GoiVipSuperchinese = () => {
         });
         tSelectedCourse.img = resChinese ? goiVipChineseConst.URL_SUPERCHINESE : goiVipChineseConst.URL_SUPERTEST;
         tSelectedCourse.text = resChinese ? i18n.t('goiVipSuperChinese.subtitle1Super') : i18n.t('goiVipSuperChinese.subtitle1Test');
-        if(selectedCourse && selectedCourse.id == courseId){
+        if (selectedCourse && selectedCourse.id == courseId) {
             tSelectedCourse = null;
+        }
+        if (tSelectedCourse) {
+            if (selecCourseDiv.current) {
+                selecCourseDiv.current.scrollIntoView({ top: 0, behavior: "smooth" });
+            }
         }
         dispatch({ type: goivipsuperchineseAction.SET_COURSE, data: tSelectedCourse });
     }, [selectedCourse, superChinese, superTest])
@@ -91,7 +101,7 @@ const GoiVipSuperchinese = () => {
                 {
                     superTest ?
                         superTest.map((item, index) => {
-                            const border =  selectedCourse && item.id == selectedCourse.id ? `${styles.goiVip_container_course_item_select} ${styles.goivip_selected}` : `${styles.goiVip_container_course_item_select}`;
+                            const border = selectedCourse && item.id == selectedCourse.id ? `${styles.goiVip_container_course_item_select} ${styles.goivip_selected}` : `${styles.goiVip_container_course_item_select}`;
                             const checked = selectedCourse && item.id == selectedCourse.id ? goiVipChineseConst.URL_SUPERTEST_CHECKED : goiVipChineseConst.URL_UNCHECKED;
                             return (<div className={styles.goiVip_container_course_item} key={index} onClick={() => chooseCourse(item.id)}>
                                 <div className={border}>
@@ -123,7 +133,7 @@ const GoiVipSuperchinese = () => {
 
     const purchaseDiv = useMemo(() => {
         return (
-            <>
+            <div className={styles.purchase} ref={selecCourseDiv}>
                 {
                     selectedCourse ?
                         <div className={styles.purchase}>
@@ -161,7 +171,7 @@ const GoiVipSuperchinese = () => {
                         :
                         null
                 }
-            </>
+            </div>
         )
     }, [selectedCourse]);
 

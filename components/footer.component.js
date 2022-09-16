@@ -125,15 +125,19 @@ const Footer = () => {
                                 </h3>
                                 <div className={styles.col_content_item} onClick={() => { clickFooter("dieukhoansudung") }}>
                                     <div className={styles.item_point}></div>
-                                    <div className={styles.item_content}>
-                                        {t('footer.dieukhoansudung')}
-                                    </div>
+                                    <Link href="/dieu-khoan-su-dung">
+                                        <div className={styles.item_content}>
+                                            {t('footer.dieukhoansudung')}
+                                        </div>
+                                    </Link>
                                 </div>
                                 <div className={styles.col_content_item} onClick={() => { clickFooter("chinhsachbaomat") }}>
                                     <div className={styles.item_point}></div>
-                                    <div className={styles.item_content}>
-                                        {t('footer.chinhsachbaomat')}
-                                    </div>
+                                    <Link href="/chinh-sach-bao-mat">
+                                        <div className={styles.item_content}>
+                                            {t('footer.chinhsachbaomat')}
+                                        </div>
+                                    </Link>
                                 </div>
 
                             </div>
