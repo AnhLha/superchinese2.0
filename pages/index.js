@@ -32,7 +32,7 @@ export default function Home() {
                 <p className={styles.bg_supertest}>Tự tin giao tiếp</p>
                 <p className={styles.bg_supertest}>Tiếng Trung phổ thông</p>
                 <p className={styles.bg_supertest}>Học hiệu quả bởi sự hỗ trợ của Trí tuệ nhân tạo</p>
-                <a className={styles.a_supertest} href="/super-chinese" className="btn d-none d-md-block">Học ngay Super Chinese</a>
+                <a className={styles.a_supertest} href="/super-chinese">Học ngay Super Chinese</a>
 
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function Home() {
               <div className={styles.text_bg}>
                 <h2>Tiếng Trung siêu việt</h2>
                 <p className={styles.bg_chinese}>Luyện thi hiệu quả bởi sự hỗ trợ của Big data và Trí tuệ nhân tạo</p>
-                <a className={styles.a_chinese} href="/super-test" className="btn bg-chinese d-none d-md-block">Luyện ngay Super Test</a>
+                <a className={styles.a_chinese} href="/super-test">Luyện ngay Super Test</a>
               </div>
             </div>
           </Carousel>

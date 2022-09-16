@@ -136,8 +136,10 @@
         width: 100%;
         min-height: 180px;
         margin-top: 20px;
+        padding-bottom: 30px;
+        background: linear-gradient( 0deg, rgba(119, 26, 192, 1) 2%, rgba(255, 255, 255, 1) 97%);
         h3{
-            color: #fff;
+            color: #000;
             font-family: 'Montserrat SemiBold', 'Montserrat Regular', 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 28px;
@@ -159,7 +161,11 @@
 
 .supertest_learn_anywhere{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
+    .image_row{
+        height: 50%;
+        width: 50%;
+    }
     .column{
         width: 50%;
         .row{
