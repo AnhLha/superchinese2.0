@@ -56,28 +56,28 @@ export default function Home() {
           <div className={styles.container_fluid}>
             <div className={styles.row}>
               <div className={styles.box_my}>
-                <Image src={my1Img} width={0} height={0} />
+                <img src={my1Img.src}/>
                 <div className={styles.overlay}>
                   <h3>Ứng dụng tự học tiếng Trung</h3>
                   <p>Trình độ sơ cấp đến trung cấp</p>
                 </div>
               </div>
               <div className={styles.box_my}>
-                <Image src={my2Img} width={0} height={0} />
+                <img src={my2Img.src} />
                 <div className={styles.overlay}>
                   <h3>Luyện thi chứng chỉ HSK</h3>
                   <p>Luyện thi chứng chỉ HSK chất lượng nhất Việt Nam</p>
                 </div>
               </div>
               <div className={styles.box_my}>
-                <Image src={my3Img} width={0} height={0} />
+                <img src={my3Img.src}/>
                 <div className={styles.overlay}>
                   <h3>Giải pháp đào tạo cho Doanh nghiệp</h3>
-                  <p>Công cụ toàn diện, mạnh mẽ và hiệu quả</p>
+                  <p >Công cụ toàn diện, mạnh mẽ và hiệu quả</p>
                 </div>
               </div>
               <div className={styles.box_my}>
-                <Image src={my4Img} width={0} height={0} />
+                <img src={my4Img.src} />
                 <div className={styles.overlay}>
                   <h3>Cam kết chất lượng</h3>
                   <p>Sẵn sàng hỗ trợ 24/7</p>
@@ -149,16 +149,16 @@ export default function Home() {
             </div>
             <div className="container">
               <div className={styles.row}>
-                <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                  <input type="text" name="email" id="emailId" className="form-control email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required="" />
+                <div className={styles.row_item}>
+                  <input type="text" name="email" id="emailId" className={styles.form_control} placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required="" />
                   <span className="error-email error-class"></span>
                 </div>
-                <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                  <input type="text" name="phone" id="phoneId" className="form-control phoneNumber" placeholder="Số điện thoại" aria-label="Phonenumber" aria-describedby="basic-addon1" required="" />
+                <div className={styles.row_item}>
+                  <input type="text" name="phone" id="phoneId" className={styles.form_control} placeholder="Số điện thoại" aria-label="Phonenumber" aria-describedby="basic-addon1" required="" />
                   <span className="error-phone error-class"></span>
                 </div>
-                <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                  <button className="btn btn-light btn-register">Đăng ký</button>
+                <div className={styles.row_item}>
+                  <button className={styles.btn_register}>Đăng ký</button>
                 </div>
                 <span className="error-general error-class col-sm-12 col-md-4 col-lg-8 col-xl-8"></span> <span className="regist-success success-class col-sm-12 col-md-4 col-lg-8 col-xl-8"></span>
               </div>
