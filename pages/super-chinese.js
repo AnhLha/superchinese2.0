@@ -1,6 +1,7 @@
 import styles from '../assets/styles/superchinese.module.scss'
 import { useTranslation } from 'react-i18next'
-import { memo } from 'react'
+import { memo, useMemo } from 'react'
+import { useSelector } from "react-redux";
 import banner3 from "../assets/images/banner3.png";
 import iconGoogle from "../assets/images/icon_google.png";
 import iconApple from "../assets/images/icon_apple.png";
@@ -29,6 +30,79 @@ const bottomBannerBackground = {
 
 const SuperChinese = () => {
     const { t, i18n } = useTranslation();
+
+    const { leftIntroduce, rightIntroduce } = useSelector(state => state.superchinese);
+
+
+
+    const leftIntroduceList = useMemo(() => {
+        return (
+            <div className={styles.superchinese_introduce_container}>
+                {
+                    leftIntroduce ? leftIntroduce.map((item, index) => {
+                        const title = i18n.t('superchinese.' + item.itemTitle);
+                        const subTitle = i18n.t('superchinese.' + item.itemSubTitle);
+                        return (<div className={styles.superchinese_introduce_left} key={index}>
+                            {
+                                item.style ?
+                                    <div className={styles.superchinese_introduce_image} style={item.style}></div>
+                                    :
+                                    null
+                            }
+                            <div className={styles.superchinese_introduce_text_left}>
+                                {
+                                    item.itemTitle ?
+                                        <div className={styles.superchinese_introduce_title}>{title}</div>
+                                        :
+                                        null
+                                }
+                                {
+                                    item.itemSubTitle ?
+                                        <div className={styles.superchinese_introduce_subtitle}>{subTitle}</div>
+                                        :
+                                        null
+                                }</div>
+                        </div>)
+                    }) : null
+                }
+            </div>
+        )
+    }, [leftIntroduce]);
+
+    const rightIntroduceList = useMemo(() => {
+        return (<div className={styles.superchinese_introduce_container}>
+            {
+                rightIntroduce ? rightIntroduce.map((item, index) => {
+                    const title = i18n.t('superchinese.' + item.itemTitle);
+                    const subTitle = i18n.t('superchinese.' + item.itemSubTitle);
+                    return (<div className={styles.superchinese_introduce_right} key={index}>
+                        {
+                            item.style ?
+                                <div className={styles.superchinese_introduce_image} style={item.style}></div>
+                                :
+                                null
+                        }
+                        <div className={styles.superchinese_introduce_text_right}>
+                            {
+                                item.itemTitle ?
+                                    <div className={styles.superchinese_introduce_title}>{title}</div>
+                                    :
+                                    null
+                            }
+                            {
+                                item.itemSubTitle ?
+                                    <div className={styles.superchinese_introduce_subtitle}>{subTitle}</div>
+                                    :
+                                    null
+                            }
+
+                        </div>
+                    </div>)
+                }) : null
+            }
+        </div>)
+    }, [rightIntroduce]);
+
     return (
         <div className={styles.super_chinese_container}>
             <div className={styles.super_chinese_banner} style={topBanner}>
@@ -53,8 +127,9 @@ const SuperChinese = () => {
                 </div>
             </div>
 
-            <div className={styles.superchinese_subtitle}>
-                
+            <div className={styles.superchinese_introduce}>
+                {leftIntroduceList}
+                {rightIntroduceList}
             </div>
 
             <div className={styles.subtitle_line} ></div>
