@@ -59,49 +59,61 @@ const Header = () => {
                         <div className={styles.container_menu}>
                             <div className={styles.row}>
                                 <Link href={{
-                                    pathname:"/"
+                                    pathname: "/"
                                 }}>
                                     <div className={styles.col_content} onClick={() => { clickManuHeader("trangchu") }}>
-                                    <div className={styles.col_content_content}>
-                                        <div className={styles.col_content_upper}>
-                                            {t('header.trangchu')}
-                                        </div>
-                                        <div className={styles.col_content_lower}>
-                                            {t('header.phanphoichinhhang')}
+                                        <div className={styles.col_content_content}>
+                                            <div className={styles.col_content_upper}>
+                                                {t('header.trangchu')}
+                                            </div>
+                                            <div className={styles.col_content_lower}>
+                                                {t('header.phanphoichinhhang')}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 </Link>
-                                <div className={styles.col_content} onClick={() => { clickManuHeader("superchines") }}>
-                                    <div className={styles.col_content_content}>
-                                        <div className={styles.col_content_upper}>
-                                            {t('header.superchinese')}
-                                        </div>
-                                        <div className={styles.col_content_lower}>
-                                            {t('header.learntoearn')}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={styles.col_content} onClick={() => { clickManuHeader("supertest") }}>
-                                    <div className={styles.col_content_content}>
-                                        <div className={styles.col_content_upper}>
-                                            {t('header.supertest')}
-                                        </div>
-                                        <div className={styles.col_content_lower}>
-                                            {t('header.hsk9cap')}
+                                <Link href={{
+                                    pathname: "/super-chinese"
+                                }}>
+                                    <div className={styles.col_content} onClick={() => { clickManuHeader("superchines") }}>
+                                        <div className={styles.col_content_content}>
+                                            <div className={styles.col_content_upper}>
+                                                {t('header.superchinese')}
+                                            </div>
+                                            <div className={styles.col_content_lower}>
+                                                {t('header.learntoearn')}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
-                                    <div className={styles.col_content_content}>
-                                        <div className={styles.col_content_upper}>
-                                            {t('header.muagoivip')}
-                                        </div>
-                                        <div className={styles.col_content_lower}>
-                                            {t('header.chinhhang')}
+                                </Link>
+                                <Link href={{
+                                    pathname: "/super-test"
+                                }}>
+                                    <div className={styles.col_content} onClick={() => { clickManuHeader("supertest") }}>
+                                        <div className={styles.col_content_content}>
+                                            <div className={styles.col_content_upper}>
+                                                {t('header.supertest')}
+                                            </div>
+                                            <div className={styles.col_content_lower}>
+                                                {t('header.hsk9cap')}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
+                                <Link href={{
+                                    pathname: "/mua-goi-vip"
+                                }}>
+                                    <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
+                                        <div className={styles.col_content_content}>
+                                            <div className={styles.col_content_upper}>
+                                                {t('header.muagoivip')}
+                                            </div>
+                                            <div className={styles.col_content_lower}>
+                                                {t('header.chinhhang')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
