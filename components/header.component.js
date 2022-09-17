@@ -35,12 +35,15 @@ const Header = () => {
                 break;
             case "taixuongsuperchinese":
                 console.log("click taixuongsuperchinese")
+                window.open(commonConst.COMMON_ZALO, '_blank', 'noopener,noreferrer')
                 break;
             case "taixuongsupertest":
                 console.log("click taixuongsupertest")
+                window.open(commonConst.COMMON_ZALO, '_blank', 'noopener,noreferrer')
                 break;
             case "kichhoatvip":
                 console.log("click kichhoatvip")
+                window.open(commonConst.COMMON_ZALO, '_blank', 'noopener,noreferrer')
                 break;
         }
     }
@@ -53,7 +56,7 @@ const Header = () => {
             </Head>
             <header>
                 <div className={styles.headerparent}>
-                    <div className={ headerColorStyle == commonConst.MENU_BLUE ?`${styles.header} ${styles.header_style_blue}` : `${styles.header} ${styles.header_style_orange}`}>
+                    <div className={headerColorStyle == commonConst.MENU_BLUE ? `${styles.header} ${styles.header_style_blue}` : `${styles.header} ${styles.header_style_orange}`}>
                         <div className={styles.container_icon}>
                             <Image src={Logo}
                                 height={0}
@@ -137,27 +140,15 @@ const Header = () => {
                                 {t('header.thithuhsk')}
                             </div>
                         </Link>
-                        <Link href={{
-                            pathname: commonConst.COMMON_ZALO
-                        }}>
-                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsuperchinese") }}>
-                                {t('header.taixuongsuperchinese')}
-                            </div>
-                        </Link>
-                        <Link href={{
-                            pathname: commonConst.COMMON_ZALO 
-                        }}>
-                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsupertest") }}>
-                                {t('header.taixuongsupertest')}
-                            </div>
-                        </Link>
-                        <Link href={{
-                            pathname: commonConst.COMMON_ZALO 
-                        }}>
-                            <div className={`${styles.header_below_item} ${styles.active_color}`} onClick={() => { clickManuHeader("kichhoatvip") }}>
-                                {t('header.kichhoatvip')}
-                            </div>
-                        </Link>
+                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsuperchinese") }}>
+                            {t('header.taixuongsuperchinese')}
+                        </div>
+                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsupertest") }}>
+                            {t('header.taixuongsupertest')}
+                        </div>
+                        <div className={`${styles.header_below_item} ${styles.active_color}`} onClick={() => { clickManuHeader("kichhoatvip") }}>
+                            {t('header.kichhoatvip')}
+                        </div>
                     </div>
                 </div>
 
