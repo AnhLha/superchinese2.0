@@ -6,7 +6,8 @@ import banner3 from "../assets/images/banner3.png";
 import iconGoogle from "../assets/images/icon_google.png";
 import iconApple from "../assets/images/icon_apple.png";
 import bottomBanner from "../assets/images/super-chinese-bottom-banner.png";
-import { superchineseConst } from "../constants";
+import { superchineseConst, commonConst } from "../constants";
+import { useHeaderStyle } from "../customeHook";
 
 const topBanner = {
     background: `url(${banner3.src}) no-repeat`,
@@ -30,6 +31,8 @@ const bottomBannerBackground = {
 
 const SuperChinese = () => {
     const { t, i18n } = useTranslation();
+
+    useHeaderStyle(commonConst.MENU_ORANGE);
 
     const { leftIntroduce, rightIntroduce } = useSelector(state => state.superchinese);
 

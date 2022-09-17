@@ -6,6 +6,17 @@ import Image from 'next/image';
 import { Carousel } from 'react-responsive-carousel';
 import bannerimg from '../assets/images/banner.png';
 import bannersupertest from '../assets/images/banner-super-test.jpg';
+import my1Img from "../assets/images/my1.png"
+import my2Img from "../assets/images/my2.png"
+import my3Img from "../assets/images/my3.png"
+import my4Img from "../assets/images/my4.png"
+import my5Img from "../assets/images/u42.png"
+import my6Img from "../assets/images/u44.png"
+import my7Img from "../assets/images/u46.png"
+import my8Img from "../assets/images/u41.png"
+import my9Img from "../assets/images/u47.png"
+import my10Img from "../assets/images/u45.png"
+import my11Img from "../assets/images/u43.png"
 
 export default function Home() {
 

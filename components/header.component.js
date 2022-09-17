@@ -1,13 +1,18 @@
 
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { memo } from 'react'
-import styles from '../assets/styles/header.module.scss'
-import Logo from '../assets/images/logo.png'
-import { useTranslation } from 'react-i18next'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { memo } from 'react';
+import styles from '../assets/styles/header.module.scss';
+import Logo from '../assets/images/logo.png';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from "react-redux";
+import { commonConst } from "../constants";
+
 const Header = () => {
     const { t, i18n } = useTranslation();
+    const { headerColorStyle } = useSelector(state => state.indexReducer);
+
     const clickManuHeader = (item) => {
         switch (item) {
             case "trangchu":
@@ -48,7 +53,7 @@ const Header = () => {
             </Head>
             <header>
                 <div className={styles.headerparent}>
-                    <div className={styles.header}>
+                    <div className={ headerColorStyle == commonConst.MENU_BLUE ?`${styles.header} ${styles.header_style_blue}` : `${styles.header} ${styles.header_style_orange}`}>
                         <div className={styles.container_icon}>
                             <Image src={Logo}
                                 height={0}
@@ -101,7 +106,7 @@ const Header = () => {
                                     </div>
                                 </Link>
                                 <Link href={{
-                                    pathname: "/mua-goi-vip"
+                                    pathname: "/goi-vip-superchinese"
                                 }}>
                                     <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
                                         <div className={styles.col_content_content}>
@@ -118,28 +123,48 @@ const Header = () => {
                         </div>
                     </div>
                     <div className={styles.header_below}>
-                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("kythihsklagi") }}>
-                            {t('header.kythihsklagi')}
-                        </div>
-                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("thithuhsk") }}>
-                            {t('header.thithuhsk')}
-                        </div>
-                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsuperchinese") }}>
-                            {t('header.taixuongsuperchinese')}
-                        </div>
-                        <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsupertest") }}>
-                            {t('header.taixuongsupertest')}
-                        </div>
-                        <div className={`${styles.header_below_item} ${styles.active_color}`} onClick={() => { clickManuHeader("kichhoatvip") }}>
-                            {t('header.kichhoatvip')}
-                        </div>
+                        <Link href={{
+                            pathname: "/ky-thi-hsk-la-gi"
+                        }}>
+                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("kythihsklagi") }}>
+                                {t('header.kythihsklagi')}
+                            </div>
+                        </Link>
+                        <Link href={{
+                            pathname: "/thi-thu-hsk"
+                        }}>
+                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("thithuhsk") }}>
+                                {t('header.thithuhsk')}
+                            </div>
+                        </Link>
+                        <Link href={{
+                            pathname: commonConst.COMMON_ZALO
+                        }}>
+                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsuperchinese") }}>
+                                {t('header.taixuongsuperchinese')}
+                            </div>
+                        </Link>
+                        <Link href={{
+                            pathname: commonConst.COMMON_ZALO 
+                        }}>
+                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsupertest") }}>
+                                {t('header.taixuongsupertest')}
+                            </div>
+                        </Link>
+                        <Link href={{
+                            pathname: commonConst.COMMON_ZALO 
+                        }}>
+                            <div className={`${styles.header_below_item} ${styles.active_color}`} onClick={() => { clickManuHeader("kichhoatvip") }}>
+                                {t('header.kichhoatvip')}
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
             </header>
 
             <div>
-                
+
             </div>
         </>
     )

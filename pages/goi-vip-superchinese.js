@@ -131,6 +131,10 @@ const GoiVipSuperchinese = () => {
         )
     }, [superTest, selectedCourse])
 
+    const purchase50k= () => {
+        window.open(goiVipChineseConst.URL_PURCHASEL, '_blank', 'noopener,noreferrer')
+    }
+
     const purchaseDiv = useMemo(() => {
         return (
             <div className={styles.purchase} ref={selecCourseDiv}>
@@ -164,7 +168,7 @@ const GoiVipSuperchinese = () => {
                                             {" " + selectedCourse.unitPrice}
                                         </div>
                                     </div>
-                                    <div className={`${styles.discountbuyer} ${styles.purchase}`}>{t('goiVipSuperChinese.purchase')}</div>
+                                    <div className={`${styles.discountbuyer} ${styles.purchase}`} onClick={purchase50k}>{t('goiVipSuperChinese.purchase')}</div>
                                 </div>
                             </div>
                         </div>
