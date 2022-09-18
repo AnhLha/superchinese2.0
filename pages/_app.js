@@ -8,6 +8,7 @@ import rootSaga from '../sagas/index'
 import { createWrapper } from 'next-redux-wrapper';
 import '../services/i18n/i18n.service'
 import Head from 'next/head'
+import { useDetectMobile } from "../customeHook";
 
 export const makeStore = (context) => {
   const sagaMiddleware = createSagaMiddleware();
@@ -20,6 +21,9 @@ export const makeStore = (context) => {
 const wrapper = createWrapper(makeStore, { debug: true })
 
 function MyApp({ Component, pageProps }) {
+
+  useDetectMobile()
+
   return (
     <>
       <Head>
