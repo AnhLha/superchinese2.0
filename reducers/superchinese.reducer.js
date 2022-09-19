@@ -21,7 +21,7 @@ const initState = {
             backgroundSize: "100% 100%"
         },
         itemTitle:"itemTitle4",
-        itemSubTitle:"itemSubTitle4",
+        itemSubTitle:"itemSubTitle4" ,
     }, {
         style: {
             background: `url(${score1.src}) no-repeat`,
