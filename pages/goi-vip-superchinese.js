@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from "react-redux";
 import { goivipsuperchineseAction } from "../actions";
 import { goiVipChineseConst } from "../constants";
+import Image from "next/image";
+import superChinesesvg from "../assets/images/supperchinese.svg";
+import superTest2svg from "../assets/images/suppertest2.svg";
 
 const GoiVipSuperchinese = () => {
     const { t, i18n } = useTranslation();
@@ -49,7 +52,7 @@ const GoiVipSuperchinese = () => {
         return (
             <div className={styles.goiVip_container_course_list}>
                 <div className={styles.goiVip_container_course_item}>
-                    <img src={goiVipChineseConst.URL_SUPERCHINESE}></img>
+                    <Image src={superChinesesvg}></Image>
                     <div className={styles.goiVip_container_course_item_title}>{t('goiVipSuperChinese.titleSuper')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle1}>{t('goiVipSuperChinese.subtitle1Super')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle2}>{t('goiVipSuperChinese.subtitle2Super')}</div>
@@ -92,7 +95,7 @@ const GoiVipSuperchinese = () => {
         return (
             <div className={`${styles.goiVip_container_course_list} ${styles.goiVip_container_super_test}`}>
                 <div className={styles.goiVip_container_course_item}>
-                    <img className={styles.unchecked} src={goiVipChineseConst.URL_SUPERTEST}></img>
+                    <Image className={styles.unchecked} src={superTest2svg}></Image>
                     <div className={styles.goiVip_container_course_item_title}>{t('goiVipSuperChinese.titleTest')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle1}>{t('goiVipSuperChinese.subtitle1Test')}</div>
                     <div className={styles.goiVip_container_course_item_subtitle2}>{t('goiVipSuperChinese.subtitle2Test')}</div>

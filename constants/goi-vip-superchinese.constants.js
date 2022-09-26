@@ -1,5 +1,6 @@
+import superChinesesvg from "../assets/images/supperchinese.svg";
 const goiVipChineseConst =  {
-    URL_SUPERCHINESE:"https://superchinese.vn/images/supperchinese.svg",
+    URL_SUPERCHINESE:{superChinesesvg},
     URL_SUPERTEST:"https://superchinese.vn/images/suppertest2.svg",
     URL_SUPERCHINESE_CHECKED:"https://superchinese.vn/images/checked.svg",
     URL_SUPERTEST_CHECKED : "https://superchinese.vn/images/checked2.svg",
