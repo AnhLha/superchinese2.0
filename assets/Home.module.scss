@@ -151,6 +151,10 @@
     text-transform: uppercase;
     border-radius: 30px;
     margin: 15px auto;
+    &:hover{
+      border: #06224e solid 1px;
+      background-color: #06224e;
+    }
   }
 
   .a_chinese{
@@ -164,6 +168,9 @@
     text-transform: uppercase;
     border-radius: 30px;
     margin: 15px auto;
+    &:hover{
+      border: #ffffff solid 1px;
+    }
   }
 }
 

@@ -68,7 +68,7 @@ $myWidthIcon: 20%;
                         content: "";
                         width: 40px;
                         height: 40px;
-                        background: url('../images/home.png');
+                        background: url('../images/home.svg') ;
                         position: relative;
                         display: block;
                     }
@@ -84,29 +84,27 @@ $myWidthIcon: 20%;
                         display: block;
                     }
                 }
-
-                &:nth-child(3) {
-                    &::before {
-                        content: "";
-                        width: 51px;
-                        height: 40px;
-                        background: url("https://superchinese.vn/images/exam.svg");
-                        position: relative;
-                        display: block;
-                    }
+                &:nth-child(3){
+                        &::before{
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url("../images/suppertest.svg") ;
+                            position: relative;
+                            display: block;
+                        }
                 }
-
-                &:nth-child(4) {
-                    &::before {
-                        content: "";
-                        width: 40px;
-                        height: 40px;
-                        background: url('../images/cart.png');
-                        position: relative;
-                        display: block;
-                    }
+                &:nth-child(4){
+                        &::before{
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url('../images/shoppingcart.svg') ;
+                            position: relative;
+                            display: block;
+                        }
                 }
-
+                
 
             }
 
@@ -148,7 +146,7 @@ $myWidthIcon: 20%;
                 content: "";
                 width: 35px;
                 height: 35px;
-                background: url('../images/home.png');
+                background: url('../images/home.svg');
                 position: relative;
                 display: block;    background-size: 100% 100%;
             }
@@ -170,7 +168,7 @@ $myWidthIcon: 20%;
                 content: "";
                 width: 35px;
                 height: 35px;
-                background: url("https://superchinese.vn/images/exam.svg");
+                background: url("../images/suppertest.svg");
                 position: relative;
                 display: block;    background-size: 100% 100%;
             }
@@ -181,7 +179,7 @@ $myWidthIcon: 20%;
                 content: "";
                 width: 35px;
                 height: 35px;
-                background: url('../images/cart.png');
+                background: url('../images/shoppingcart.svg');
                 position: relative;
                 display: block;    background-size: 100% 100%;
             }

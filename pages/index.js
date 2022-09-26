@@ -55,7 +55,7 @@ export default function Home() {
         <div className={styles.about}>
           <div className={styles.container_fluid}>
             <div className={styles.title}>
-              Chúng tôi cung cấp những gì
+              <h2>Chúng tôi cung cấp những gì</h2>
             </div>
           </div>
           <div className={styles.container_fluid}>

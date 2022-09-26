@@ -53,10 +53,14 @@ export default function SuperTest() {
 
             <div className={styles.superchinese_subtitle} >
                 <div className={styles.superchinese_subtitle_title_big} >
-                    Ứng dụng dạy tiếng Trung của các công ty trong danh sách Fortune TOP 500
+                    <h1>
+                        Ứng dụng dạy tiếng Trung của các công ty trong danh sách Fortune TOP 500
+                    </h1>
                 </div>
                 <div className={styles.superchinese_subtitle_title_small} >
-                    Học bất cứ nơi đâu, bất cứ lúc nào
+                    <h2>
+                        Học bất cứ nơi đâu, bất cứ lúc nào
+                    </h2>
                 </div>
                 <div className={styles.supertest_learn_anywhere}>
                     <img className={styles.image_row} src={u338.src} />
@@ -89,7 +93,9 @@ export default function SuperTest() {
 
             <div className={styles.superchinese_subtitle} >
                 <div className={styles.superchinese_subtitle_title_small} >
-                    Ứng dụng học tập
+                    <h2>
+                        Ứng dụng học tập
+                    </h2>
                 </div>
                 <div className={styles.supertest_learn_anywhere}>
                     <div className={styles.column}>
@@ -134,7 +140,9 @@ export default function SuperTest() {
 
             <div className={styles.superchinese_subtitle} >
                 <div className={styles.superchinese_subtitle_title_small} >
-                    Học phụ đạo HSK 1 kèm 1
+                    <h2>
+                        Học phụ đạo HSK 1 kèm 1
+                    </h2>
                 </div>
                 <div className={styles.supertest_learn_anywhere}>
                     <img className={styles.image_row} src={u406.src} />
@@ -167,7 +175,7 @@ export default function SuperTest() {
 
                 </div>
             </div>
-
+            <div className={styles.subtitle_line} ></div>
             <div className={styles.superchinese_bottom_banner} >
                 <h3>Tải ứng dụng</h3>
                 <div className={styles.superchinese_bottom_banner_link_mobile}>

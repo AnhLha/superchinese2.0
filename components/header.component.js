@@ -15,31 +15,13 @@ const Header = () => {
 
     const clickManuHeader = (item) => {
         switch (item) {
-            case "trangchu":
-                console.log("click trang chu")
-                break;
-            case "superchines":
-                console.log("click superchines")
-                break;
-            case "supertest":
-                console.log("click supertest")
-                break;
-            case "muagoivip":
-                console.log("click muagoivip")
-                break;
-            case "kythihsklagi":
-                console.log("click kythihsklagi")
-                break;
-            case "thithuhsk":
-                console.log("click thithuhsk")
-                break;
             case "taixuongsuperchinese":
                 console.log("click taixuongsuperchinese")
                 window.open(commonConst.COMMON_ZALO, '_blank', 'noopener,noreferrer')
                 break;
             case "taixuongsupertest":
                 console.log("click taixuongsupertest")
-                window.open(commonConst.COMMON_ZALO, '_blank', 'noopener,noreferrer')
+                window.open(commonConst.COMMON_DOWNLOAD_SUPERTEST, '_blank', 'noopener,noreferrer')
                 break;
             case "kichhoatvip":
                 console.log("click kichhoatvip")
@@ -69,7 +51,7 @@ const Header = () => {
                                 <Link href={{
                                     pathname: "/"
                                 }}>
-                                    <div className={styles.col_content} onClick={() => { clickManuHeader("trangchu") }}>
+                                    <div className={styles.col_content}>
                                         <div className={styles.col_content_content}>
                                             <div className={styles.col_content_upper}>
                                                 {t('header.trangchu')}
@@ -83,7 +65,7 @@ const Header = () => {
                                 <Link href={{
                                     pathname: "/super-chinese"
                                 }}>
-                                    <div className={styles.col_content} onClick={() => { clickManuHeader("superchines") }}>
+                                    <div className={styles.col_content}>
                                         <div className={styles.col_content_content}>
                                             <div className={styles.col_content_upper}>
                                                 {t('header.superchinese')}
@@ -97,7 +79,7 @@ const Header = () => {
                                 <Link href={{
                                     pathname: "/super-test"
                                 }}>
-                                    <div className={styles.col_content} onClick={() => { clickManuHeader("supertest") }}>
+                                    <div className={styles.col_content}>
                                         <div className={styles.col_content_content}>
                                             <div className={styles.col_content_upper}>
                                                 {t('header.supertest')}
@@ -111,7 +93,7 @@ const Header = () => {
                                 <Link href={{
                                     pathname: "/goi-vip-superchinese"
                                 }}>
-                                    <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
+                                    <div className={styles.col_content}>
                                         <div className={styles.col_content_content}>
                                             <div className={styles.col_content_upper}>
                                                 {t('header.muagoivip')}
@@ -129,14 +111,14 @@ const Header = () => {
                         <Link href={{
                             pathname: "/ky-thi-hsk-la-gi"
                         }}>
-                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("kythihsklagi") }}>
+                            <div className={styles.header_below_item}>
                                 {t('header.kythihsklagi')}
                             </div>
                         </Link>
                         <Link href={{
                             pathname: "/thi-thu-hsk"
                         }}>
-                            <div className={styles.header_below_item} onClick={() => { clickManuHeader("thithuhsk") }}>
+                            <div className={styles.header_below_item}>
                                 {t('header.thithuhsk')}
                             </div>
                         </Link>
