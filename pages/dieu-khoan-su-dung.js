@@ -99,6 +99,7 @@ const DieuKhoanSuDung = () => {
           <p>&nbsp;</p>
           <p>{t('dieuKhoanSuDung.p54')}</p>
 
+          <p>&nbsp;</p>
           <p><strong>{t('dieuKhoanSuDung.strong6')}</strong></p>
           <p>&nbsp;</p>
           <p>{t('dieuKhoanSuDung.p61')}</p>
@@ -107,13 +108,14 @@ const DieuKhoanSuDung = () => {
           <p>&nbsp;</p>
           <p>{t('dieuKhoanSuDung.p63')}</p>
 
-
+          <p>&nbsp;</p>
           <p><strong>{t('dieuKhoanSuDung.strong7')}</strong></p>
           <p>&nbsp;</p>
           <p>{t('dieuKhoanSuDung.p71')}</p>
           <p>&nbsp;</p>
           <p>{t('dieuKhoanSuDung.p72')}</p>
 
+          <p>&nbsp;</p>
           <p><strong>{t('dieuKhoanSuDung.strong8')}</strong></p>
           <p>&nbsp;</p>
           <p dangerouslySetInnerHTML={{ __html: t('dieuKhoanSuDung.strong81') }}></p>

@@ -153,7 +153,53 @@ const Header = () => {
                 </div>
 
             </header>
+            <div className={styles.header_mobile}>
 
+                <Link href={{
+                    pathname: "/"
+                }}>
+                    <div className={styles.col_content} onClick={() => { clickManuHeader("trangchu") }}>
+                        <div className={styles.col_content_content}>
+                            <div className={styles.col_content_upper}>
+                                {t('header.trangchu')}
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+                <Link href={{
+                    pathname: "/super-chinese"
+                }}>
+                    <div className={styles.col_content} onClick={() => { clickManuHeader("superchines") }}>
+                        <div className={styles.col_content_content}>
+                            <div className={styles.col_content_upper}>
+                                {t('header.superchinese')}
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+                <Link href={{
+                    pathname: "/super-test"
+                }}>
+                    <div className={styles.col_content} onClick={() => { clickManuHeader("supertest") }}>
+                        <div className={styles.col_content_content}>
+                            <div className={styles.col_content_upper}>
+                                {t('header.supertest')}
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+                <Link href={{
+                    pathname: "/goi-vip-superchinese"
+                }}>
+                    <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
+                        <div className={styles.col_content_content}>
+
+                        </div><div className={styles.col_content_upper}>
+                            {t('header.muagoivip')}
+                        </div>
+                    </div>
+                </Link>
+            </div>
             <div>
 
             </div>

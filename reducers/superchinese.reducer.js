@@ -10,21 +10,21 @@ const initState = {
     loading: false,
     leftIntroduce: [{
         style: {
-            background: `url(${timeline.src}) no-repeat`,
+            background: `${timeline.src}`,
             backgroundSize: "100% 100%"
         },
         itemTitle:"itemTitle2",
         itemSubTitle:"itemSubTitle2",
     }, {
         style: {
-            background: `url(${subject.src}) no-repeat`,
+            background: `${subject.src}`,
             backgroundSize: "100% 100%"
         },
         itemTitle:"itemTitle4",
         itemSubTitle:"itemSubTitle4" ,
     }, {
         style: {
-            background: `url(${score1.src}) no-repeat`,
+            background: `${score1.src}`,
             backgroundSize: "100% 100%"
         },
         itemTitle:"",
@@ -36,14 +36,14 @@ const initState = {
         itemSubTitle:"itemSubTitle1",
     },{
         style: {
-            background: `url(${score2.src}) no-repeat`,
+            background: `${score2.src}`,
             backgroundSize: "100% 100%"
         },
         itemTitle:"itemTitle3",
         itemSubTitle:"itemSubTitle3",
     }, {
         style: {
-            background: `url(${voice.src}) no-repeat`,
+            background: `${voice.src}`,
             backgroundSize: "100% 100%"
         },
         itemTitle:"itemTitle5",

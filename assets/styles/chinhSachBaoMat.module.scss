@@ -6,6 +6,17 @@
   align-items: center;
   min-height: 500px;
   padding-top: 120px;
+  color: #666666;
+
+  p{
+    strong{
+      font-weight: bolder;
+    }
+  }
+
+  strong{
+    font-weight: bolder;
+  }
 
   .container_course {
     padding-top: 10px;

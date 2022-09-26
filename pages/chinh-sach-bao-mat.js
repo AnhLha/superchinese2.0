@@ -76,7 +76,7 @@ const ChinhSachBaoMat = () => {
                     <p>&nbsp;</p>
                     <p>{t('chinhSachBaoMat.p41')}</p>
                     <p>&nbsp;</p>
-                    <p>{t('chinhSachBaoMat.p42')}</p>
+                    <p dangerouslySetInnerHTML={{ __html: t('chinhSachBaoMat.p42') }}></p>
                     <p>&nbsp;</p>
                     <p>{t('chinhSachBaoMat.p43')}</p>
                     <p>&nbsp;</p>
