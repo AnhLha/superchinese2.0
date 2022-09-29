@@ -18,6 +18,11 @@
     align-items: flex-start;
 }
 
+.flex_end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
 .goiVip_container {
     @extend .flex_column;
     @extend .flex_start;
@@ -49,7 +54,7 @@
         background-color: rgba(241, 236, 245, 1);
         width: 100%;
         padding: 20px 0;
-
+        color: #666666;
         .goiVip_container_course_container {
             width: 1320px;
 
@@ -70,7 +75,7 @@
             }
 
             @media screen and (max-width: 556px) {
-                width: 540px;
+                width: 100%;
             }
 
             .goiVip_container_course_list {
@@ -150,6 +155,10 @@
                     color: #6960F7;
                 }
 
+                .goivip_selected{
+                    border: 3px solid #FA0707;
+                }
+
                 .goiVip_container_course_item_select {
                     width: 100%;
                     height: 300px;
@@ -160,11 +169,16 @@
                     position: relative;
                     cursor: pointer;
 
-                    &:hover {
-                        border: 3px solid red;
+                    
+                    @media screen and (max-width: 556px) {
+                        height: 200px;
                     }
 
-                    .unchecked{
+                    &:hover {
+                        border: 3px solid #FA0707;
+                    }
+
+                    .unchecked {
                         top: 0;
                         left: 0;
                         position: absolute;
@@ -172,25 +186,27 @@
                         width: 30px;
                     }
 
-                    .time{
+                    .time {
                         font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
                         font-weight: 700;
                         font-size: 20px;
                         line-height: 30px;
                         padding-top: 40px;
-                        span{
-                            font-size: 60px;
+
+                        span {
+                            font-size: 24px;
                         }
                     }
 
-                    .price{
+                    .price {
                         font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
                         font-weight: 700;
                         font-size: 20px;
                         line-height: 30px;
                         padding-top: 40px;
-                        span{
-                            font-size: 60px;
+
+                        span {
+                            font-size: 36px;
                         }
                     }
                 }
@@ -208,6 +224,198 @@
 
             .goiVip_container_super_test {
                 padding-top: 50px;
+            }
+        }
+    }
+
+    .purchase {
+        width: 100%;
+        display: flex;
+        @extend .flex_row;
+        @extend .flex_center;
+
+        .purchase_container {
+            width: 100%;
+            @extend .flex_row;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: 1400px) {
+                width: 1320px;
+            }
+
+            @media screen and (max-width: 1200px) {
+                width: 1140px;
+            }
+
+            @media screen and (max-width: 992px) {
+                width: 960px;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 720px;
+            }
+
+            @media screen and (max-width: 556px) {
+                width: 100%;
+            }
+
+            .purchase_container_order {
+                display: flex;
+                @extend .flex_start;
+                flex-grow: 1;
+                font-family: "Montserrat SemiBold", "Montserrat Regular", "Montserrat", sans-serif;
+                font-weight: 600;
+                font-size: 28px;
+                padding-bottom: 5px;
+                margin-left:  9.2vw;;
+            }
+
+            .purchase_container_select {
+                @extend .flex_column;
+                @extend .flex_start;
+                width: 25%;
+                padding: 0px 8px;
+                margin-top: 16px;
+
+                @media screen and (max-width: 1200px) {
+                    width: 25%;
+                }
+
+                @media screen and (max-width: 992px) {
+                    width: 25%;
+                }
+
+                @media screen and (max-width: 768px) {
+                    width: 25%;
+                }
+
+                @media screen and (max-width: 556px) {
+                    width: 50%;
+                }
+
+                .time {
+                    font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 30px;
+                    padding-top: 40px;
+
+                    span {
+                        font-size: 24px;
+                    }
+                }
+
+                .price {
+                    font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 30px;
+                    padding-top: 40px;
+
+                    .normal {
+                        color: #000;
+                    }
+
+                    .red {
+                        color: #FA0707
+                    }
+
+                    span {
+                        font-size: 36px;
+                        color: #000;
+                    }
+                }
+
+                .price_total{
+                    display: flex;
+                    @extend .flex_center;
+                }
+
+                .title_item {
+                    width: 100%;
+                    @extend .flex_row;
+                    @extend .flex_start;
+                    font-family: "Montserrat SemiBold", "Montserrat Regular", "Montserrat", sans-serif;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 50px;
+                    text-align: center;
+
+                    img {
+                        height: 60px;
+                        width: 60px;
+                        margin-right: 10px;
+                    }
+                }
+
+                .title_total {
+                    width: 100%;
+                    @extend .flex_row;
+                    @extend .flex_center;
+                    font-family: "Montserrat SemiBold", "Montserrat Regular", "Montserrat", sans-serif;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+
+                .item {
+                    width: 100%;
+                    height: 300px;
+                    background-color: rgba(255, 255, 255, 1);
+                    border-radius: 20px;
+                    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+                    text-align: center;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover {
+                        border: 3px solid #FA0707;
+                    }
+
+
+                    @media screen and (max-width: 556px) {
+                        height: 200px;
+                    }
+
+                }
+
+                .discountbuyer {
+                    @extend .flex_row;
+                    @extend .flex_center;
+                    padding-top: 10px;
+                    font-family: 'Montserrat Medium', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                    cursor: pointer;
+                    border-radius: 50px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    width: 100%;
+                    height: 52px;
+                    margin: 15px 0px 30px 0px;
+                }
+
+                .discount {
+                    background: linear-gradient(180deg, rgba(17, 138, 203, 1) 0%, rgba(50, 180, 74, 1) 100%);
+
+                    &:hover {
+                        color: #a4a4a4;
+                    }
+                }
+
+                .purchase {
+                    background: linear-gradient(180deg, rgb(213 5 5) 0%, rgb(255 2 2) 100%);
+
+                    &:hover {
+                        color: #a4a4a4;
+                    }
+                }
+
             }
         }
     }

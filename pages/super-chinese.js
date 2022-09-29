@@ -6,20 +6,22 @@ import banner3 from "../assets/images/banner3.png";
 import iconGoogle from "../assets/images/icon_google.png";
 import iconApple from "../assets/images/icon_apple.png";
 import bottomBanner from "../assets/images/super-chinese-bottom-banner.png";
-import { superchineseConst } from "../constants";
+import { superchineseConst, commonConst } from "../constants";
+import { useHeaderStyle } from "../customeHook";
+import Image from 'next/image';
 
 const topBanner = {
-    background: `url(${banner3.src}) no-repeat`,
+    background: `${banner3.src}`,
     backgroundSize: "100% 100%"
 }
 
 const topIconAndroid = {
-    background: `url(${iconGoogle.src}) no-repeat`,
+    background: `${iconGoogle.src}`,
     backgroundSize: "100% 100%"
 }
 
 const topIconApple = {
-    background: `url(${iconApple.src}) no-repeat`,
+    background: `${iconApple.src}`,
     backgroundSize: "100% 100%"
 }
 
@@ -30,6 +32,8 @@ const bottomBannerBackground = {
 
 const SuperChinese = () => {
     const { t, i18n } = useTranslation();
+
+    useHeaderStyle(commonConst.MENU_ORANGE);
 
     const { leftIntroduce, rightIntroduce } = useSelector(state => state.superchinese);
 
@@ -45,7 +49,8 @@ const SuperChinese = () => {
                         return (<div className={styles.superchinese_introduce_left} key={index}>
                             {
                                 item.style ?
-                                    <div className={styles.superchinese_introduce_image} style={item.style}></div>
+                                    // <div className={styles.superchinese_introduce_image} style={item.style}></div>
+                                    <Image  src={item.style.background}  layout="fill"/>
                                     :
                                     null
                             }
@@ -78,7 +83,8 @@ const SuperChinese = () => {
                     return (<div className={styles.superchinese_introduce_right} key={index}>
                         {
                             item.style ?
-                                <div className={styles.superchinese_introduce_image} style={item.style}></div>
+                                // <div className={styles.superchinese_introduce_image} style={item.style}></div>
+                                <Image  src={item.style.background}  layout="fill"/>
                                 :
                                 null
                         }
@@ -105,7 +111,8 @@ const SuperChinese = () => {
 
     return (
         <div className={styles.super_chinese_container}>
-            <div className={styles.super_chinese_banner} style={topBanner}>
+            <div className={styles.super_chinese_banner}>
+                <figure><Image src={topBanner.background} layout="fill"/></figure>
                 <div className={styles.super_chinese_banner_left_text}>
                     <h2>{t('superchinese.titleTopBanner')}</h2>
                     <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}>{t('superchinese.buttonTopBanner')}</a>
@@ -137,8 +144,8 @@ const SuperChinese = () => {
             <div className={styles.superchinese_bottom_banner} style={bottomBannerBackground}>
                 <h3>{t('superchinese.bottomTitle')}</h3>
                 <div className={styles.superchinese_bottom_banner_link_mobile}>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><div className={styles.superchinese_bottom_banner_URL} style={topIconApple}></div></a>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><div className={styles.superchinese_bottom_banner_URL} style={topIconAndroid}></div></a>
+                    <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><Image  src={topIconApple.background}  layout="responsive" width={100} height={100}/><div className={styles.superchinese_bottom_banner_URL} style={topIconApple}></div></a>
+                    <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}> <Image  src={topIconAndroid.background}  layout="responsive" width={100} height={100}/><div className={styles.superchinese_bottom_banner_URL} style={topIconAndroid}></div></a>
                 </div>
             </div>
 

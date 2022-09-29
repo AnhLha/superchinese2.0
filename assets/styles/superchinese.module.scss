@@ -52,6 +52,12 @@
         height: 95vh;
         padding-top: 80px;
 
+        span{
+            img{
+
+            }
+        }
+
         @media screen and (min-width: 1200px) {
             //do Smth
         }
@@ -61,6 +67,7 @@
             @extend .flex_center;
             width: 55%;
             margin-top: 75px;
+            position: relative;
 
             @media screen and (max-width: 1200px) {
                 width: 55%;
@@ -134,6 +141,7 @@
         width: 90%;
         margin: 20px 0px;
         flex-wrap: wrap;
+
         @media screen and (max-width: 1200px) {
             max-width: 1140px;
         }
@@ -169,7 +177,7 @@
             }
 
             @media screen and (max-width: 768px) {
-                width: 100%;
+                width: 50%;
             }
 
             @media screen and (max-width: 556px) {
@@ -177,20 +185,31 @@
             }
 
             min-height: 500px;
+
+            span {
+                position: relative !important;
+
+                img {
+                    position: relative !important;
+                    width: 100% !important;
+                    height: auto !important;
+                }
+            }
         }
 
         .superchinese_introduce_left {
             @extend .flex_column;
             @extend .flex_start;
             width: 100%;
+
             @media screen and (max-width: 768px) {
                 justify-content: center;
-                align-self: center;
+                align-items: center;
             }
 
             @media screen and (max-width: 556px) {
                 justify-content: center;
-                align-self: center;
+                align-items: center;
             }
         }
 
@@ -198,9 +217,10 @@
             @extend .flex_column;
             @extend .flex_end;
             width: 100%;
+
             @media screen and (max-width: 768px) {
                 justify-content: center;
-                align-self: center;
+                align-items: center;
             }
 
             @media screen and (max-width: 556px) {
@@ -277,6 +297,7 @@
             font-weight: 600;
             font-size: 28px;
             padding: 20px 0;
+            margin: 0px;
         }
 
         .superchinese_bottom_banner_link_mobile {
@@ -284,10 +305,20 @@
             @extend .flex_row;
             @extend .flex_center;
 
-            .superchinese_bottom_banner_URL {
-                width: 240px;
-                height: 78px;
+            a {
                 margin: 5px 5px 20px 5px;
+
+                span {
+                    position: relative !important;
+                    padding-top: 0px!important;
+                    img {
+                        position: relative !important;
+                        width: 240px !important;
+                        height: 78px !important;
+                        max-width: unset!important;
+                        max-height: unset!important;
+                    }
+                }
             }
         }
     }

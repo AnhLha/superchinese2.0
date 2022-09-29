@@ -17,11 +17,16 @@ import my8Img from "../assets/images/u41.png"
 import my9Img from "../assets/images/u47.png"
 import my10Img from "../assets/images/u45.png"
 import my11Img from "../assets/images/u43.png"
+import Head from 'next/head'
 
 export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Head>
+      <title>Tiếng Trung siêu việt</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
       <div className={styles.main}>
         <div className={styles.listbanner}>
           <Carousel>
@@ -50,7 +55,7 @@ export default function Home() {
         <div className={styles.about}>
           <div className={styles.container_fluid}>
             <div className={styles.title}>
-              Chúng tôi cung cấp những gì
+              <h2>Chúng tôi cung cấp những gì</h2>
             </div>
           </div>
           <div className={styles.container_fluid}>
