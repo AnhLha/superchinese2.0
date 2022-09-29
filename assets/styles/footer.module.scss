@@ -1,7 +1,7 @@
 $myWidth:80%;
 
 .footer {
-    background: url(https://superchinese.vn/images/footer.svg) no-repeat center;
+    background: url('../images/footer.svg') no-repeat center;
     background-size: cover;
     width: 100%;
     height: 372px;
@@ -17,16 +17,17 @@ $myWidth:80%;
     display: flex;
     flex-wrap: wrap;
     .col_item{
+        padding: 7px 0px;
         &:nth-child(1){
             a{
                 &:after{
                     content: "";
                     width: 45px;
                     height: 40px;
-                    background: url("https://superchinese.vn/images/course.svg") no-repeat center;
+                    background: url("../images/course.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }
@@ -36,10 +37,10 @@ $myWidth:80%;
                     content: "";
                     width: 45px;
                     height: 40px;
-                    background: url("https://superchinese.vn/images/exam.svg") no-repeat center;
+                    background: url("../images/exam.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }
@@ -49,10 +50,10 @@ $myWidth:80%;
                     content: "";
                     width: 45px;
                     height: 40px;
-                    background: url("https://superchinese.vn/images/library.svg") no-repeat center;
+                    background: url("../images/library.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }
@@ -62,10 +63,10 @@ $myWidth:80%;
                     content: "";
                     width: 45px;
                     height: 40px;
-                    background: url("https://superchinese.vn/images/blog.svg") no-repeat center;
+                    background: url("../images/blog.svg") no-repeat center;
                     position: relative;
                     display: block;
-                    margin: 0 auto;
+                    margin: 10px auto;
                 }
             }
         }
@@ -128,6 +129,10 @@ $myWidth:80%;
         align-items: center;
         .item_content{
             margin-left: 5px;
+            cursor: pointer;
+            &:hover{
+                color: rgb(237, 87, 35)
+            }
         }
         .item_point{
             border-radius: 50%;

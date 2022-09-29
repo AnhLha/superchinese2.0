@@ -8,7 +8,11 @@ import locImg from "../assets/images/loc.png"
 import emailImg from "../assets/images/email.png"
 import sdtImg from "../assets/images/call.png"
 import fbImg from "../assets/images/fb.png"
-
+import kythihskimg from "../assets/images/course.svg"
+import dethihskimg from "../assets/images/exam.svg"
+import thuvienimg from "../assets/images/library.svg"
+import blogimg from "../assets/images/blog.svg"
+import logoimg from "../assets/images/logo.png"
 const Footer = () => {
     const { t, i18n } = useTranslation();
     const clickFooter = (item) => {
@@ -90,21 +94,25 @@ const Footer = () => {
                                 <h3>
                                     {t('footer.kythi')}
                                 </h3>
-                                <div className={styles.col_content_item} onClick={() => { clickFooter("kithihsk") }}>
-                                    <Image src={locImg} />
-                                    <div className={styles.item_content}>
-                                        {t('footer.kithihsk')}
+                                <Link href="/ky-thi-hsk-la-gi">
+                                    <div className={styles.col_content_item}>
+                                        <Image src={kythihskimg} width={24} height={24} />
+                                        <div className={styles.item_content}>
+                                            {t('footer.kithihsk')}
+                                        </div>
                                     </div>
-                                </div>
-                                <div className={styles.col_content_item} onClick={() => { clickFooter("dethihsk") }}>
-                                    <Image src={emailImg} />
-                                    <div className={styles.item_content}>
-                                        {t('footer.dethihsk')}
+                                </Link>
+                                <Link href="/thi-thu-hsk">
+                                    <div className={styles.col_content_item}>
+                                        <Image src={dethihskimg} width={24} height={24} />
+                                        <div className={styles.item_content}>
+                                            {t('footer.dethihsk')}
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                                 <Link href="https://hanban.vn/">
                                     <div className={styles.col_content_item}>
-                                        <Image src={sdtImg} />
+                                        <Image src={thuvienimg} width={24} height={24} />
                                         <div className={styles.item_content}>
                                             {t('footer.thuvien')}
                                         </div>
@@ -112,7 +120,7 @@ const Footer = () => {
                                 </Link>
                                 <Link href="https://hanban.vn/">
                                     <div className={styles.col_content_item}>
-                                        <Image src={fbImg} />
+                                        <Image src={blogimg} width={24} height={24} />
                                         <div className={styles.item_content}>
                                             {t('footer.blog')}
                                         </div>
@@ -125,22 +133,29 @@ const Footer = () => {
                                 </h3>
                                 <div className={styles.col_content_item} onClick={() => { clickFooter("dieukhoansudung") }}>
                                     <div className={styles.item_point}></div>
-                                    <div className={styles.item_content}>
-                                        {t('footer.dieukhoansudung')}
-                                    </div>
+                                    <Link href="/dieu-khoan-su-dung">
+                                        <div className={styles.item_content}>
+                                            {t('footer.dieukhoansudung')}
+                                        </div>
+                                    </Link>
                                 </div>
                                 <div className={styles.col_content_item} onClick={() => { clickFooter("chinhsachbaomat") }}>
                                     <div className={styles.item_point}></div>
-                                    <div className={styles.item_content}>
-                                        {t('footer.chinhsachbaomat')}
-                                    </div>
+                                    <Link href="/chinh-sach-bao-mat">
+                                        <div className={styles.item_content}>
+                                            {t('footer.chinhsachbaomat')}
+                                        </div>
+                                    </Link>
                                 </div>
 
                             </div>
                             <div className={styles.col_content} >
-                                <h3>
-                                    {t('footer.lienhe')}
-                                </h3>
+                                <Link href="/">
+                                    <h3>
+                                        <Image src={logoimg} width={180} height={35} />
+                                    </h3>
+                                </Link>
+
                                 <div className={styles.col_content_item} style={{ fontWeight: 650 }}>
                                     <div>
                                         {t('footer.banquyenthuocve')}
@@ -161,7 +176,7 @@ const Footer = () => {
                                         {t('footer.tennhaphanphoi')}
                                     </div>
                                 </div>
-                                <span className={styles.logo}>
+                                <span className={styles.logo} style={{ marginTop: 15, marginLeft: 0 }}>
                                     <Image src={Announced}
                                         alt="Đã thông báo với bộ công thương"
                                         width={106} height={40}
