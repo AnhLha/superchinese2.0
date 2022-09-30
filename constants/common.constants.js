@@ -3,7 +3,7 @@ const commonConst =  {
     COMMON_DOWNLOAD_SUPERCHINESE: "https://play.google.com/store/apps/details?id=com.superchinese",
     COMMON_DOWNLOAD_SUPERTEST: "https://play.google.com/store/apps/details?id=com.hskonline",
     MENU_BLUE:"MENU_BLUE",
-    MENU_ORANGE:"MENU_BLUE",
+    MENU_ORANGE:"MENU_ORANGE",
     REDIRECT_URL: "https://50k.superchinese.vn/"
 }
 

@@ -18,8 +18,11 @@ import my9Img from "../assets/images/u47.png"
 import my10Img from "../assets/images/u45.png"
 import my11Img from "../assets/images/u43.png"
 import Head from 'next/head'
+import { commonConst } from "../constants";
+import { useHeaderStyle } from "../customeHook";
 
 export default function Home() {
+  useHeaderStyle(commonConst.MENU_BLUE);
 
   return (
     <div className={styles.container}>
@@ -59,7 +62,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.container_fluid}>
-            <div className={styles.row}>
+            <div className={`${styles.row} ${styles.row_provide}`}>
               <div className={styles.box_my}>
                 <img src={my1Img.src}/>
                 <div className={styles.overlay}>
@@ -152,7 +155,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="container">
+            <div className={styles.container}>
               <div className={styles.row}>
                 <div className={styles.row_item}>
                   <input type="text" name="email" id="emailId" className={styles.form_control} placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" required="" />

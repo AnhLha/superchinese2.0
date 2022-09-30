@@ -3,12 +3,14 @@ import styles from '../assets/styles/goiVipSuperChinese.module.scss';
 import { useTranslation } from 'react-i18next'
 import { useSelector, useDispatch } from "react-redux";
 import { goivipsuperchineseAction } from "../actions";
-import { goiVipChineseConst } from "../constants";
+import { goiVipChineseConst, commonConst } from "../constants";
 import Image from "next/image";
 import superChinesesvg from "../assets/images/supperchinese.svg";
 import superTest2svg from "../assets/images/suppertest2.svg";
+import { useHeaderStyle } from "../customeHook";
 
 const GoiVipSuperchinese = () => {
+    useHeaderStyle(commonConst.MENU_BLUE);
     const { t, i18n } = useTranslation();
 
     const { superChinese, superTest, selectedCourse } = useSelector(state => state.goivipsuperchinese);

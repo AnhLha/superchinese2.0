@@ -4,7 +4,7 @@ import banner4 from "../assets/images/banner4.png";
 import iconGoogle from "../assets/images/icon_google.png";
 import iconApple from "../assets/images/icon_apple.png";
 import bottomBanner from "../assets/images/super-chinese-bottom-banner.png";
-import { superchineseConst } from "../constants";
+import { superchineseConst,commonConst } from "../constants";
 import Image from "next/image";
 import u338 from "../assets/images/u388.png"
 import u391 from "../assets/images/u391.png"
@@ -17,7 +17,11 @@ import u409 from "../assets/images/u409.png"
 import u411 from "../assets/images/u411.png"
 import u412 from "../assets/images/u412.png"
 import u413 from "../assets/images/u413.png"
+import { useHeaderStyle } from "../customeHook";
+
 export default function SuperTest() {
+    useHeaderStyle(commonConst.MENU_BLUE);
+
     const topBanner = {
         background: `url(${banner4.src}) no-repeat`,
         backgroundSize: "100% 100%"

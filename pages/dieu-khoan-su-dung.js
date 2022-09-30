@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { dieuKhoanSuDungConst } from "../constants";
+import { dieuKhoanSuDungConst, commonConst } from "../constants";
 import styles from "../assets/styles/dieuKhoanSuDung.module.scss";
 import { useTranslation } from 'react-i18next'
 import iconGoogle from "../assets/images/icon_google.png";
@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { Carousel } from 'react-responsive-carousel';
 import bannerimg from '../assets/images/banner.png';
 import bannersupertest from '../assets/images/banner-super-test.jpg';
+import { useHeaderStyle } from "../customeHook";
 
 const topIconAndroid = {
   background: `url(${iconGoogle.src}) no-repeat`,
@@ -22,6 +23,7 @@ const topIconApple = {
 }
 
 const DieuKhoanSuDung = () => {
+  useHeaderStyle(commonConst.MENU_BLUE);
   const { t, i18n } = useTranslation();
 
   return (

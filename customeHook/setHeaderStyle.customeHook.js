@@ -9,10 +9,10 @@ const useHeaderStyle = (style) => {
     useEffect(() => {
         switch (style) {
             case commonConst.MENU_BLUE:
-                dispatch({type:indexAction.SET_HEADER_STYLE, data: commonConst.MENU_BLUE});
+                dispatch({type:indexAction.SET_HEADER_STYLE, value: commonConst.MENU_BLUE});
                 return;
             case commonConst.MENU_ORANGE:
-                dispatch({type:indexAction.SET_HEADER_STYLEm, data: commonConst.MENU_ORANGE});
+                dispatch({type:indexAction.SET_HEADER_STYLE, value: commonConst.MENU_ORANGE});
                 return;
             default:
                 return;
