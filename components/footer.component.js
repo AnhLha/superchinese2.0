@@ -35,7 +35,6 @@ const Footer = () => {
     }
     return (
         <>
-            <div ></div>
             <footer>
                 <div className={styles.footer}>
                     <div className={styles.container}>
@@ -64,7 +63,7 @@ const Footer = () => {
                     </div>
                     <div className={styles.container}>
                         <div className={styles.row}>
-                            <div className={styles.col_content}>
+                            <div className={`${styles.col_content} ${styles.col_content_100}`}>
                                 <h3>
                                     {t('footer.lienhe')}
                                 </h3>
@@ -90,7 +89,7 @@ const Footer = () => {
                                     <Image src={fbImg} />
                                 </div>
                             </div>
-                            <div className={styles.col_content}>
+                            <div className={`${styles.col_content} ${styles.col_content_50}`}>
                                 <h3>
                                     {t('footer.kythi')}
                                 </h3>
@@ -127,7 +126,7 @@ const Footer = () => {
                                     </div>
                                 </Link>
                             </div>
-                            <div className={styles.col_content}>
+                            <div className={`${styles.col_content} ${styles.col_content_50}`}>
                                 <h3>
                                     {t('footer.dieukhoan')}
                                 </h3>
@@ -149,7 +148,7 @@ const Footer = () => {
                                 </div>
 
                             </div>
-                            <div className={styles.col_content} >
+                            <div className={`${styles.col_content} ${styles.col_content_100}`} >
                                 <Link href="/">
                                     <h3>
                                         <Image src={logoimg} width={180} height={35} />

@@ -7,6 +7,7 @@
     width: 80px;
     height: 80px;
     z-index: 9999;
+    cursor: pointer;
 }
 
 .iconZalo{
@@ -15,8 +16,11 @@
     right: 15px;
     margin-right: 15px;
     background: url("../images/iconzalo.png");
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
 }
 
 .popupZalo{

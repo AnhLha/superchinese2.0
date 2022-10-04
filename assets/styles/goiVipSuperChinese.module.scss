@@ -29,6 +29,11 @@
     width: 100%;
     min-height: 500px;
     padding-top: 120px;
+    
+    @media screen and (max-width: 992px) {
+        padding-top: 59px;
+    }
+
 
     .goiVip_container_title {
         @extend .flex_column;
@@ -179,8 +184,8 @@
                     }
 
                     .unchecked {
-                        top: 0;
-                        left: 0;
+                        top: 2%;
+                        left: 2%;
                         position: absolute;
                         height: 30px;
                         width: 30px;

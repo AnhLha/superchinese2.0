@@ -21,29 +21,30 @@
     .container_contain {
       display: flex;
       flex-direction: column;
-      width: 87%;
+      // width: 87%;
+      width: 1320px;
       padding: 15px 12px;
       margin-right: auto;
       margin-left: auto;
 
       @media screen and (min-width: 1400px) {
-        width: 1320px;
-      }
-
-      @media screen and (min-width: 1200px) {
         width: 1140px;
       }
 
-      @media screen and (min-width: 992px) {
+      @media screen and (max-width: 1200px) {
         width: 960px;
       }
 
-      @media screen and (min-width: 768px) {
+      @media screen and (max-width: 992px) {
         width: 720px;
       }
 
-      @media screen and (min-width: 556px) {
+      @media screen and (max-width: 768px) {
         width: 87%;
+      }
+
+      @media screen and (max-width: 556px) {
+        width: 100%;
       }
 
       h1{

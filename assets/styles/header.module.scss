@@ -3,7 +3,7 @@ $myWidthIcon: 20%;
 
 .headerparent {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 9999;
 }
 
@@ -17,6 +17,13 @@ $myWidthIcon: 20%;
     .container_icon {
         width: $myWidthIcon;
         height: 60px;
+        height: 100%;
+        width: 150px;
+        margin: 10px;
+        @media screen and (max-width: 992px) {
+            height: 60px;
+        }
+    
     }
 
     .container_menu {
@@ -119,7 +126,7 @@ $myWidthIcon: 20%;
     position: fixed;
     bottom: 0px;
     z-index: 100;
-    width: 100%;
+    width: 100vw;
     padding: 5px 10px;
     flex-direction: row;
     justify-content: center;
@@ -136,6 +143,7 @@ $myWidthIcon: 20%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         .col_content_upper {
             font-family: 'Montserrat';
             text-align: center; font-size: 13px;
