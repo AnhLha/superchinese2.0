@@ -35,10 +35,14 @@ function MyApp({ Component, pageProps }) {
         <meta name="author" content="" />
         <link rel="shortcut icon" href="/static/favicon.ico" />
         <meta property="og:title" content="Tiếng Trung siêu việt" key="title" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        </style>
       </Head>
 
       <Header />
-      <IconFixed />
+      {/* <IconFixed /> */}
       <div className='app-wrapper'>
         <Component {...pageProps} />
       </div>

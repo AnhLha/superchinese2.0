@@ -23,17 +23,17 @@ export default function SuperTest() {
     useHeaderStyle(commonConst.MENU_BLUE);
 
     const topBanner = {
-        background: `url(${banner4.src}) no-repeat`,
+        background: `${banner4.src}`,
         backgroundSize: "100% 100%"
     }
 
     const topIconAndroid = {
-        background: `url(${iconGoogle.src}) no-repeat`,
+        background: `${iconGoogle.src}`,
         backgroundSize: "100% 100%"
     }
 
     const topIconApple = {
-        background: `url(${iconApple.src}) no-repeat`,
+        background: `${iconApple.src}`,
         backgroundSize: "100% 100%"
     }
 
@@ -44,13 +44,14 @@ export default function SuperTest() {
 
     return (
         <div className={styles.super_chinese_container}>
-            <div className={styles.super_chinese_banner} style={topBanner}>
+            <div className={styles.super_chinese_banner}>
+                <img src={topBanner.background} />
                 <div className={styles.super_chinese_banner_left_text}>
                     <h2>THE SMARTER HSK APPLICATION</h2>
                     <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}>Tải ứng dụng</a>
                     <div className={styles.super_chinese_banner_link_mobile}>
-                        <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><div className={styles.super_chinese_banner_link_mobile_URL} style={topIconApple}></div></a>
-                        <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><div className={styles.super_chinese_banner_link_mobile_URL} style={topIconAndroid}></div></a>
+                        <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} /></a>
+                        <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconAndroid.background} /></a>
                     </div>
                 </div>
             </div>
@@ -183,8 +184,8 @@ export default function SuperTest() {
             <div className={styles.superchinese_bottom_banner} >
                 <h3>Tải ứng dụng</h3>
                 <div className={styles.superchinese_bottom_banner_link_mobile}>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><div className={styles.superchinese_bottom_banner_URL} style={topIconApple}></div></a>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><div className={styles.superchinese_bottom_banner_URL} style={topIconAndroid}></div></a>
+                    <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} /></a>
+                    <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconAndroid.background} /></a>
                 </div>
             </div>
 

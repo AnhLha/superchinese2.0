@@ -32,7 +32,7 @@ const DieuKhoanSuDung = () => {
       <div className={stylesCaro.listbanner}>
         <Carousel>
           <div>
-            <Image src={bannersupertest} alt="banner_super_test" height={0} width={0} layout="fill" />
+            <Image src={bannerimg} alt="banner_super_test" height={0} width={0} layout="fill" />
             <div className={stylesCaro.text_bg} >
               <h2>Nói tiếng Trung Quốc như người bản xứ</h2>
               <p className={stylesCaro.bg_supertest}>Tự tin giao tiếp</p>
@@ -43,7 +43,7 @@ const DieuKhoanSuDung = () => {
             </div>
           </div>
           <div>
-            <Image src={bannerimg} alt="banner" height={0} width={0} />
+            <Image src={bannersupertest} alt="banner" height={0} width={0} />
             <div className={stylesCaro.text_bg}>
               <h2>Tiếng Trung siêu việt</h2>
               <p className={stylesCaro.bg_chinese}>Luyện thi hiệu quả bởi sự hỗ trợ của Big data và Trí tuệ nhân tạo</p>

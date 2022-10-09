@@ -119,8 +119,8 @@ const SuperChinese = () => {
                     <h2>{t('superchinese.titleTopBanner')}</h2>
                     <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}>{t('superchinese.buttonTopBanner')}</a>
                     <div className={styles.super_chinese_banner_link_mobile}>
-                        <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><div className={styles.super_chinese_banner_link_mobile_URL} style={topIconApple}></div></a>
-                        <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><div className={styles.super_chinese_banner_link_mobile_URL} style={topIconAndroid}></div></a>
+                        <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} alt="icon top apple"/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconApple.background} alt="icon top apple"/></a>
                     </div>
                 </div>
             </div>
@@ -146,8 +146,8 @@ const SuperChinese = () => {
             <div className={styles.superchinese_bottom_banner} style={bottomBannerBackground}>
                 <h3>{t('superchinese.bottomTitle')}</h3>
                 <div className={styles.superchinese_bottom_banner_link_mobile}>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><Image src={topIconApple.background} layout="responsive" width={100} height={100} /><div className={styles.superchinese_bottom_banner_URL} style={topIconApple}></div></a>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}> <Image src={topIconAndroid.background} layout="responsive" width={100} height={100} /><div className={styles.superchinese_bottom_banner_URL} style={topIconAndroid}></div></a>
+                    <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} alt="icon apple"/></a>
+                    <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconAndroid.background} alt="icon android"/></a>
                 </div>
             </div>
 

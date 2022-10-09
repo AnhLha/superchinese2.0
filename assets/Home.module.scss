@@ -318,6 +318,10 @@ $bs-gutter-x: 0;
   .row {
     display: flex;
     justify-content: space-around;
+    @media screen and (max-width: 576px) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
 
     .service_box {
       text-align: center;
@@ -346,6 +350,7 @@ $bs-gutter-x: 0;
     .titlepage {
       h3 {
         font-size: 28px;
+        line-height: normal;
       }
     }
     .row_item {
