@@ -44,7 +44,6 @@
         text-align: center;
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
             font-weight: 400;
             font-style: normal;
             font-size: 16px;
@@ -125,7 +124,6 @@
                 }
 
                 .goiVip_container_course_item_subtitle1 {
-                    font-family: "Montserrat SemiBold", "Montserrat Regular", "Montserrat", sans-serif;
                     font-weight: 600;
                     font-size: 28px;
                     padding-bottom: 5px;
@@ -144,7 +142,6 @@
                 }
 
                 .goiVip_container_course_item_subtitle3 {
-                    font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
                     font-size: 30px;
                     line-height: 36px;
                     font-weight: 700;
@@ -192,7 +189,6 @@
                     }
 
                     .time {
-                        font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
                         font-weight: 700;
                         font-size: 20px;
                         line-height: 30px;
@@ -204,7 +200,6 @@
                     }
 
                     .price {
-                        font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
                         font-weight: 700;
                         font-size: 20px;
                         line-height: 30px;
@@ -218,7 +213,6 @@
 
                 .goiVip_container_course_item_buyer {
                     padding-top: 10px;
-                    font-family: 'Montserrat Medium', sans-serif;
                     font-size: 16px;
 
                     span {
@@ -270,7 +264,6 @@
                 display: flex;
                 @extend .flex_start;
                 flex-grow: 1;
-                font-family: "Montserrat SemiBold", "Montserrat Regular", "Montserrat", sans-serif;
                 font-weight: 600;
                 font-size: 28px;
                 padding-bottom: 5px;
@@ -301,7 +294,6 @@
                 }
 
                 .time {
-                    font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 30px;
@@ -313,7 +305,6 @@
                 }
 
                 .price {
-                    font-family: "Montserrat Bold", "Montserrat Regular", "Montserrat", sans-serif;
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 30px;
@@ -342,7 +333,6 @@
                     width: 100%;
                     @extend .flex_row;
                     @extend .flex_start;
-                    font-family: "Montserrat SemiBold", "Montserrat Regular", "Montserrat", sans-serif;
                     font-weight: 600;
                     font-size: 24px;
                     line-height: 50px;
@@ -359,7 +349,6 @@
                     width: 100%;
                     @extend .flex_row;
                     @extend .flex_center;
-                    font-family: "Montserrat SemiBold", "Montserrat Regular", "Montserrat", sans-serif;
                     font-weight: 600;
                     font-size: 24px;
                     line-height: 50px;
@@ -391,7 +380,6 @@
                     @extend .flex_row;
                     @extend .flex_center;
                     padding-top: 10px;
-                    font-family: 'Montserrat Medium', sans-serif;
                     font-size: 16px;
                     color: #fff;
                     cursor: pointer;

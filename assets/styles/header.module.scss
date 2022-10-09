@@ -11,17 +11,23 @@ $myWidthIcon: 20%;
     background: linear-gradient(135deg, rgba(154, 31, 243, 1) 0%, rgba(57, 159, 254, 1) 100%);
     // z-index: 999;
     height: 60px;
-    padding: 8px 0px 0px 0px;
     display: flex;
+    align-items: center;
 
     .container_icon {
-        width: $myWidthIcon;
-        height: 60px;
-        height: 100%;
-        width: 150px;
-        margin: 10px;
+        padding-left: 20px;
+        width: 25%;
+        cursor: pointer;
+        img {
+            height: 40px !important;
+            width: auto;
+        }
         @media screen and (max-width: 992px) {
-            height: 60px;
+            width: auto;
+            img {
+                height: 30px !important;
+                width: auto;
+            }
         }
     
     }
@@ -49,13 +55,13 @@ $myWidthIcon: 20%;
                 position: relative;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 cursor: pointer;
 
                 .col_content_content {
                     margin-left: 15px;
 
                     .col_content_upper {
-                        font-family: 'Montserrat';
                         text-align: center;
                         font-size: 20px;
                     }
@@ -145,7 +151,6 @@ $myWidthIcon: 20%;
         align-items: center;
         cursor: pointer;
         .col_content_upper {
-            font-family: 'Montserrat';
             text-align: center; font-size: 13px;
             color: #fff;
         }

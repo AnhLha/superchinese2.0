@@ -7,10 +7,9 @@
 
     .titlepage {
       line-height: 24px;
-
+      margin-bottom: 20px;
       h3 {
-
-        font-family: 'Montserrat-Regular', 'Montserrat', sans-serif;
+        font-size: 28px;
       }
     }
   }
@@ -18,7 +17,6 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -59,8 +57,6 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -93,7 +89,6 @@
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-  font-family: 'Montserrat-Regular', 'Montserrat', sans-serif;
 }
 
 .card p {
@@ -103,8 +98,9 @@
 }
 
 .listbanner {
-  margin-top: -85px;
-  width: 100vw;
+  img {
+    width: 100vw !important;
+  }
 }
 
 .text_bg {
@@ -124,9 +120,7 @@
     line-height: 60px;
     padding-bottom: 25px;
     text-transform: uppercase;
-    font-family: 'Montserrat';
     font-weight: 700;
-    font-family: 'Montserrat-Regular', 'Montserrat', sans-serif;
   }
 
   .bg_supertest {
@@ -135,7 +129,7 @@
     color: #fff;
     line-height: 25px;
     padding: 5px 10px;
-    margin: 3px;
+    margin: 0 6px;
     font-weight: 500;
     background: linear-gradient(102.00020967188529deg, rgba(151, 35, 243, 1) 0%, rgba(237, 87, 35, 1) 100%);
   }
@@ -210,9 +204,13 @@ $bs-gutter-x: 0;
   .title {
     text-align: center;
     align-items: center;
-    font-size: 36px;
-    font-weight: 400;
-    font-style: normal;
+    h2 {
+      font-weight: 400;
+      font-size: 36px;
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
   }
 
   .row_provide {
@@ -226,8 +224,7 @@ $bs-gutter-x: 0;
     width: 100%;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    padding: 15px 0;
+    justify-content: space-between;
 
     h2 {
       align-items: center;
@@ -238,63 +235,72 @@ $bs-gutter-x: 0;
       position: relative;
       // margin-right: 20px;
       // margin-left: 20px;
-      padding: 0px 12px;
       box-shadow: #4d4646ab 0px 0px 15px 1px;
       color: white;
-      width: 25%;
-
+      width: 24%;
+      
       @media screen and (max-width: 1200px) {
-        width: 25%;
+        width: 24%;
       }
-
+      
       @media screen and (max-width: 992px) {
-        width: 25%;
+        width: 23%;
       }
 
       @media screen and (max-width: 768px) {
-        width: 50%;
+        margin-top: 10px;
+        width: 49%;
       }
 
       @media screen and (max-width: 556px) {
-        width: 50%;
+        width: 49%;
       }
 
       img {
-        margin-top: 20px;
         width: 100%;
         height: 100%;
+      }
+
+      &:hover .overlay {
+        background-color: #200769bd;
+        p {
+          height: 65px;
+          opacity: 1;
+          transition: ease all 0.5s;
+        }
       }
 
       .overlay {
         position: absolute;
         bottom: 0;
         background: #200769;
-        width: 93%;
-
-        &:hover {
-          p {
-            display: block;
-            opacity: 1;
-          }
-        }
+        width: 100%;
 
         h3 {
           font-weight: 400;
-          margin: 9px 0 0 0;
           padding: 0;
-          padding-bottom: 9px;
-          font-size: 24px;
+          font-size: 18px;
+          @media screen and (max-width: 768px) {
+            padding: 0 4px;
+            font-size: 14px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
         }
 
         p {
           line-height: normal;
           margin-top: 8px;
-          display: none;
+          height: 0;
+          transition: all .4s ease-in;
           overflow: hidden;
           opacity: 0;
           margin: 0;
           transition: all .4s ease-in;
           padding: 0 10px;
+          font-size: 14px;
         }
       }
     }
@@ -313,25 +319,11 @@ $bs-gutter-x: 0;
     display: flex;
     justify-content: space-around;
 
-    @media screen and (max-width: 768px) {
-      justify-content: flex-start;
-      flex-wrap: wrap;
-  }
-
-    @media screen and (max-width: 576px) {
-      justify-content: flex-start;
-      flex-wrap: wrap;
-  }
-
     .service_box {
       text-align: center;
       width: 20%;
       height: 20%;
       margin: 0px 8px 0px 8px;
-      @media screen and (max-width: 576px) {
-        margin: 8px 4px 0px 4px;
-        width: 23%;
-    }
     }
   }
 }
@@ -339,50 +331,28 @@ $bs-gutter-x: 0;
 .agency {
   background-color: rgba(0, 0, 0, 0.6627450980392157);
   width: 100%;
-  // height: 180px;
+  height: 180px;
   margin-top: 50px;
-  // margin-bottom: 50px;
-  padding-bottom: 14px;
-  display: flex;
-  flex-direction: column;
-
-  .container{
-    display: flex;
-    margin: 0px auto;
-    @media screen and (max-width: 1200px) {
-      width: 920px;
-  }
-
-  @media screen and (max-width: 992px) {
-      width: 720px;
-  }
-
-  @media screen and (max-width: 768px) {
-      width: 540px;
-  }
-
-  @media screen and (max-width: 576px) {
-      width: 86%;
-  }
-  }
+  margin-bottom: 50px;
 
   .row {
     display: flex;
     justify-content: center;
     margin-top: 1.5px;
     margin: 0px auto;
-    // height: 50px;
-    width: 99%;
+    height: 50px;
+    width: 80%;
 
     .titlepage {
-      font-size: 28px;
+      h3 {
+        font-size: 28px;
+      }
     }
     .row_item {
-      // margin-right: 30px;
-      // margin-top: 15px;
+      margin-right: 30px;
+      margin-top: 15px;
       width: 33.3333333%;
-      margin: 15px 8px 0px 8px;
-      // height: 50px;
+      height: 50px;
       @media screen and (max-width: 1200px) {
         width: 33.3333333%;
       }
@@ -392,7 +362,7 @@ $bs-gutter-x: 0;
       }
 
       @media screen and (max-width: 768px) {
-        width: 100%;
+        width: 33.3333333%;
       }
 
       @media screen and (max-width: 576px) {
@@ -407,7 +377,7 @@ $bs-gutter-x: 0;
 .form_control {
   display: block;
   width: 100%;
-  padding: 9px 24px 8px;
+  padding: 20px;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
@@ -432,7 +402,7 @@ $bs-gutter-x: 0;
   font-size: 20px;
   color: #FFFFFF;
   width: 100%;
-  padding: 12px;
+  padding: 24px;
 }
 
 @media (max-width: 600px) {

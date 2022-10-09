@@ -34,7 +34,7 @@ export default function Home() {
         <div className={styles.listbanner}>
           <Carousel>
             <div>
-              <Image src={bannersupertest} alt="banner_super_test" height={0} width={0} layout="fill" />
+              <Image src={bannerimg} alt="banner_super_test" height={0} width={0} layout="fill" />
               <div className={styles.text_bg} >
                 <h2>Nói tiếng Trung Quốc như người bản xứ</h2>
                 <p className={styles.bg_supertest}>Tự tin giao tiếp</p>
@@ -45,7 +45,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <Image src={bannerimg} alt="banner" height={0} width={0} />
+              <Image src={bannersupertest} alt="banner" height={0} width={0} />
               <div className={styles.text_bg}>
                 <h2>Tiếng Trung siêu việt</h2>
                 <p className={styles.bg_chinese}>Luyện thi hiệu quả bởi sự hỗ trợ của Big data và Trí tuệ nhân tạo</p>
@@ -100,8 +100,8 @@ export default function Home() {
           <div className={styles.row}>
               <div className={styles.titlepage}>
                 <h3>Thêm một ngoại ngữ, thêm nhiều cơ hội</h3>
-                <p>Bất kể nhu cầu đào tạo ngôn ngữ của bạn là gì, chúng tôi có thể cung cấp cho bạn và công ty của bạn các dịch vụ </p>
-                <p>được cá nhân hóa, phù hợp với lịch trình bận rộn, giúp bạn tạo ra những giá trị tốt đẹp hơn</p>
+                <div>Bất kể nhu cầu đào tạo ngôn ngữ của bạn là gì, chúng tôi có thể cung cấp cho bạn và công ty của bạn các dịch vụ </div>
+                <div>được cá nhân hóa, phù hợp với lịch trình bận rộn, giúp bạn tạo ra những giá trị tốt đẹp hơn</div>
               </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.agency}>
+          {/* <div className={styles.agency}>
             <div className={styles.container}>
               <div className={styles.row}>
                 <div className="col-md-12">
@@ -171,7 +171,7 @@ export default function Home() {
                 <span className="error-general error-class col-sm-12 col-md-4 col-lg-8 col-xl-8"></span> <span className="regist-success success-class col-sm-12 col-md-4 col-lg-8 col-xl-8"></span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
       </div>

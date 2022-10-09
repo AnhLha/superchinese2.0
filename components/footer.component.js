@@ -18,16 +18,12 @@ const Footer = () => {
     const clickFooter = (item) => {
         switch (item) {
             case "kithihsk":
-                console.log("click kithihsk")
                 return 1;
             case "dethihsk":
-                console.log("click dethihsk")
                 return 1;
             case "dieukhoansudung":
-                console.log("click dieukhoansudung")
                 return 1;
             case "chinhsachbaomat":
-                console.log("click chinhsachbaomat")
                 return 1;
             default:
                 break;

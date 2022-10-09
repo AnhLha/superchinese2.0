@@ -16,15 +16,12 @@ const Header = () => {
     const clickManuHeader = (item) => {
         switch (item) {
             case "taixuongsuperchinese":
-                console.log("click taixuongsuperchinese")
                 window.open(commonConst.COMMON_ZALO, '_blank', 'noopener,noreferrer')
                 break;
             case "taixuongsupertest":
-                console.log("click taixuongsupertest")
                 window.open(commonConst.COMMON_DOWNLOAD_SUPERTEST, '_blank', 'noopener,noreferrer')
                 break;
             case "kichhoatvip":
-                console.log("click kichhoatvip")
                 window.open(commonConst.COMMON_ZALO, '_blank', 'noopener,noreferrer')
                 break;
         }
@@ -40,11 +37,9 @@ const Header = () => {
                 <div className={styles.headerparent}>
                     <div className={headerColorStyle == commonConst.MENU_BLUE ? `${styles.header} ${styles.header_style_blue}` : `${styles.header} ${styles.header_style_orange}`}>
                         <div className={styles.container_icon}>
-                            <Image src={Logo}
-                                height={0}
-                                width={0}
-                                target="_blank"
-                                rel="noopener noreferrer" />
+                            <Link href="/">
+                                <Image src={Logo} />
+                            </Link>
                         </div>
                         <div className={styles.container_menu}>
                             <div className={styles.row}>
@@ -90,9 +85,7 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </Link>
-                                <Link href={{
-                                    pathname: "/goi-vip-superchinese"
-                                }}>
+                                <a href={commonConst.REDIRECT_URL}>
                                     <div className={styles.col_content}>
                                         <div className={styles.col_content_content}>
                                             <div className={styles.col_content_upper}>
@@ -103,7 +96,7 @@ const Header = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -170,9 +163,7 @@ const Header = () => {
                         </div>
                     </div>
                 </Link>
-                <Link href={{
-                    pathname: "/goi-vip-superchinese"
-                }}>
+                <a href={commonConst.REDIRECT_URL}>
                     <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
                         <div className={styles.col_content_content}>
 
@@ -180,7 +171,7 @@ const Header = () => {
                             {t('header.muagoivip')}
                         </div>
                     </div>
-                </Link>
+                </a>
             </div>
             <div>
 
