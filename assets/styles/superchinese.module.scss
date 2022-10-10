@@ -129,7 +129,7 @@
                 border-radius: 30px;
                 margin: 15px auto;
 
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: 1200px) {
                     display: none;
                 }
             }
@@ -148,7 +148,7 @@
                     height: 37px;
                 }
 
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: 1200px) {
                     display: none;
                 }
             }
@@ -157,26 +157,32 @@
     }
 
     .superchinese_introduce {
-        width: 90%;
         margin: 20px 0px;
         flex-wrap: wrap;
 
+        width: 1320px;
+        min-height: 250px;
+
+        @media screen and (max-width: 1400px) {
+            width: 1140px;
+        }
+
         @media screen and (max-width: 1200px) {
-            max-width: 1140px;
+            width: 960px;
         }
 
         @media screen and (max-width: 992px) {
-            max-width: 960px;
+            width: 720px;
         }
 
         @media screen and (max-width: 768px) {
-            max-width: 720px;
+            width: 540px;
         }
 
-        @media screen and (max-width: 556px) {
-            max-width: 540px;
+        @media screen and (max-width: 576px) {
+            width: 86%;
+            margin: 0px auto;
         }
-
         min-height: 500px;
         @extend .flex_row;
         @extend .flex_start;
@@ -294,10 +300,31 @@
     }
 
     .superchinese_subtitle {
-        width: 85%;
+        width: 1320px;
         min-height: 250px;
         @extend .flex_column;
         @extend .flex_center;
+
+        @media screen and (max-width: 1400px) {
+            width: 1140px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            width: 960px;
+        }
+
+        @media screen and (max-width: 992px) {
+            width: 720px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 540px;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 86%;
+            margin: 0px auto;
+        }
 
         .superchinese_subtitle_title_big {
             font-weight: 400;
@@ -326,7 +353,7 @@
             color: #fff;
             font-weight: 600;
             font-size: 28px;
-            padding: 20px 0;
+            // padding: 20px 0;
             margin: 0px;
         }
 
@@ -362,6 +389,11 @@
                 img {
                     width: 240px;
                     height: 100%;
+                    
+                    @media screen and (max-width: 576px) {
+                        width: 155px;
+                    }
+            
                 }
             }
 

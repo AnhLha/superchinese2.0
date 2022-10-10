@@ -68,7 +68,9 @@ export default function SuperTest() {
                     </h2>
                 </div>
                 <div className={styles.supertest_learn_anywhere}>
+                    <div className={styles.div_img}>
                     <img className={styles.image_row} src={u338.src} />
+                    </div>
                     <div className={styles.column}>
                         <div className={styles.row}>
                             <a className={styles.thumb}>
@@ -138,7 +140,9 @@ export default function SuperTest() {
                             </div>
                         </div>
                     </div>
+                    <div className={styles.div_img}>
                     <img className={styles.image_row} src={u403.src} />
+                    </div>
                 </div>
 
             </div>
@@ -150,7 +154,9 @@ export default function SuperTest() {
                     </h2>
                 </div>
                 <div className={styles.supertest_learn_anywhere}>
+                    <div className={styles.div_img}>
                     <img className={styles.image_row} src={u406.src} />
+                    </div>
                     <div className={styles.column}>
                         <div className={styles.row}>
                             <a className={styles.thumb}>

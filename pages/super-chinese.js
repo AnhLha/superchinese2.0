@@ -50,8 +50,8 @@ const SuperChinese = () => {
                             {
                                 item.style ?
                                     // <div className={styles.superchinese_introduce_image} style={item.style}></div>
-                                    <Image src={item.style.background} layout="fill" />
-                                    // <img src={item.style.background}/>
+                                    // <Image src={item.style.background} layout="fill" />
+                                    <img src={item.style.background} />
                                     :
                                     null
                             }
@@ -85,7 +85,8 @@ const SuperChinese = () => {
                         {
                             item.style ?
                                 // <div className={styles.superchinese_introduce_image} style={item.style}></div>
-                                <Image src={item.style.background} layout="fill" />
+                                // <Image src={item.style.background} layout="fill" />
+                                <img src={item.style.background} />
                                 :
                                 null
                         }

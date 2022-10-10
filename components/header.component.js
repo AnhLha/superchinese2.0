@@ -121,7 +121,7 @@ const Header = () => {
                         <div className={styles.header_below_item} onClick={() => { clickManuHeader("taixuongsupertest") }}>
                             {t('header.taixuongsupertest')}
                         </div>
-                        <div className={`${styles.header_below_item} ${styles.active_color}`} onClick={() => { clickManuHeader("kichhoatvip") }}>
+                        <div className={headerColorStyle == commonConst.MENU_BLUE ? `${styles.header_below_item} ${styles.active_color}` : `${styles.header_below_item} ${styles.superchinese_active_color}`} onClick={() => { clickManuHeader("kichhoatvip") }}>
                             {t('header.kichhoatvip')}
                         </div>
                     </div>
