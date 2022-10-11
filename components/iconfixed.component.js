@@ -4,10 +4,6 @@ import Link from "next/link"
 
 const IconFixed = ()=>{
     const [isChoose, setIsChoose] = useState(false)
-    const openPopupZalo = () =>{
-        console.log("Click icon zalo")
-        setIsChoose(!isChoose)
-    }
     return(
         <>
             <Link href="https://50k.superchinese.vn/">
@@ -15,8 +11,6 @@ const IconFixed = ()=>{
 
                 </div>
             </Link>
-            <div className={styles.iconZalo} onClick={()=>{openPopupZalo()}}>
-            </div>
             {
                 isChoose?
                 <div className={styles.popupZalo}>

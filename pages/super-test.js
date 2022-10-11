@@ -4,7 +4,7 @@ import banner4 from "../assets/images/banner4.png";
 import iconGoogle from "../assets/images/icon_google.png";
 import iconApple from "../assets/images/icon_apple.png";
 import bottomBanner from "../assets/images/super-chinese-bottom-banner.png";
-import { superchineseConst } from "../constants";
+import { superchineseConst,commonConst } from "../constants";
 import Image from "next/image";
 import u338 from "../assets/images/u388.png"
 import u391 from "../assets/images/u391.png"
@@ -17,19 +17,23 @@ import u409 from "../assets/images/u409.png"
 import u411 from "../assets/images/u411.png"
 import u412 from "../assets/images/u412.png"
 import u413 from "../assets/images/u413.png"
+import { useHeaderStyle } from "../customeHook";
+
 export default function SuperTest() {
+    useHeaderStyle(commonConst.MENU_BLUE);
+
     const topBanner = {
-        background: `url(${banner4.src}) no-repeat`,
+        background: `${banner4.src}`,
         backgroundSize: "100% 100%"
     }
 
     const topIconAndroid = {
-        background: `url(${iconGoogle.src}) no-repeat`,
+        background: `${iconGoogle.src}`,
         backgroundSize: "100% 100%"
     }
 
     const topIconApple = {
-        background: `url(${iconApple.src}) no-repeat`,
+        background: `${iconApple.src}`,
         backgroundSize: "100% 100%"
     }
 
@@ -40,13 +44,14 @@ export default function SuperTest() {
 
     return (
         <div className={styles.super_chinese_container}>
-            <div className={styles.super_chinese_banner} style={topBanner}>
+            <div className={styles.super_chinese_banner}>
+                <img src={topBanner.background} />
                 <div className={styles.super_chinese_banner_left_text}>
                     <h2>THE SMARTER HSK APPLICATION</h2>
                     <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}>Tải ứng dụng</a>
                     <div className={styles.super_chinese_banner_link_mobile}>
-                        <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><div className={styles.super_chinese_banner_link_mobile_URL} style={topIconApple}></div></a>
-                        <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><div className={styles.super_chinese_banner_link_mobile_URL} style={topIconAndroid}></div></a>
+                        <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} /></a>
+                        <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconAndroid.background} /></a>
                     </div>
                 </div>
             </div>
@@ -63,7 +68,9 @@ export default function SuperTest() {
                     </h2>
                 </div>
                 <div className={styles.supertest_learn_anywhere}>
+                    <div className={styles.div_img}>
                     <img className={styles.image_row} src={u338.src} />
+                    </div>
                     <div className={styles.column}>
                         <div className={styles.row}>
                             <a className={styles.thumb}>
@@ -133,7 +140,9 @@ export default function SuperTest() {
                             </div>
                         </div>
                     </div>
+                    <div className={styles.div_img}>
                     <img className={styles.image_row} src={u403.src} />
+                    </div>
                 </div>
 
             </div>
@@ -145,7 +154,9 @@ export default function SuperTest() {
                     </h2>
                 </div>
                 <div className={styles.supertest_learn_anywhere}>
+                    <div className={styles.div_img}>
                     <img className={styles.image_row} src={u406.src} />
+                    </div>
                     <div className={styles.column}>
                         <div className={styles.row}>
                             <a className={styles.thumb}>
@@ -179,8 +190,8 @@ export default function SuperTest() {
             <div className={styles.superchinese_bottom_banner} >
                 <h3>Tải ứng dụng</h3>
                 <div className={styles.superchinese_bottom_banner_link_mobile}>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_IOS}><div className={styles.superchinese_bottom_banner_URL} style={topIconApple}></div></a>
-                    <a href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><div className={styles.superchinese_bottom_banner_URL} style={topIconAndroid}></div></a>
+                    <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} /></a>
+                    <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconAndroid.background} /></a>
                 </div>
             </div>
 
