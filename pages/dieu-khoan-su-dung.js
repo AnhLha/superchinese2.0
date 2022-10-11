@@ -13,12 +13,12 @@ import bannersupertest from '../assets/images/banner-super-test.jpg';
 import { useHeaderStyle } from "../customeHook";
 
 const topIconAndroid = {
-  background: `url(${iconGoogle.src}) no-repeat`,
+  background: `${iconGoogle.src}`,
   backgroundSize: "100% 100%"
 }
 
 const topIconApple = {
-  background: `url(${iconApple.src}) no-repeat`,
+  background: `${iconApple.src}`,
   backgroundSize: "100% 100%"
 }
 
@@ -188,8 +188,8 @@ const DieuKhoanSuDung = () => {
         <div className={styles.bottom_banner}>
           <h3>{t('dieuKhoanSuDung.download')}</h3>
           <div className={styles.bottom_banner_link_mobile}>
-            <a href={dieuKhoanSuDungConst.URL_DOWNLOAD_APP_IOS}><div className={styles.bottom_banner_URL} style={topIconApple}></div></a>
-            <a href={dieuKhoanSuDungConst.URL_DOWNLOAD_APP_ANDROID}><div className={styles.bottom_banner_URL} style={topIconAndroid}></div></a>
+            <a href={dieuKhoanSuDungConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background}/></a>
+            <a href={dieuKhoanSuDungConst.URL_DOWNLOAD_APP_ANDROID}><img  src={topIconAndroid.background}/></a>
           </div>
         </div>
 

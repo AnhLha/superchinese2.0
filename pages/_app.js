@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Header />
-      {/* <IconFixed /> */}
+      <IconFixed />
       <div className='app-wrapper'>
         <Component {...pageProps} />
       </div>
