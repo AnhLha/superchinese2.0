@@ -8,6 +8,10 @@ import Logo from '../assets/images/logo.png';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from "react-redux";
 import { commonConst } from "../constants";
+import home from '../assets/images/home.svg';
+import supperchinese from '../assets/images/supperchinese.png';
+import suppertest from '../assets/images/suppertest.svg';
+import shoppingcart from '../assets/images/shoppingcart.svg';
 
 const Header = () => {
     const { t, i18n } = useTranslation();
@@ -128,13 +132,14 @@ const Header = () => {
                 </div>
 
             </header>
-            <div className={styles.header_mobile}>
+            <div className={headerColorStyle == commonConst.MENU_BLUE ? `${styles.header_mobile}` : `${styles.header_mobile} ${styles.superchinese}`}>
 
                 <Link href={{
                     pathname: "/"
                 }}>
                     <div className={styles.col_content} onClick={() => { clickManuHeader("trangchu") }}>
                         <div className={styles.col_content_content}>
+                            {/* <img src={home.src} /> */}
                             <div className={styles.col_content_upper}>
                                 {t('header.trangchu')}
                             </div>
@@ -146,6 +151,7 @@ const Header = () => {
                 }}>
                     <div className={styles.col_content} onClick={() => { clickManuHeader("superchines") }}>
                         <div className={styles.col_content_content}>
+                            {/* <img src={supperchinese.src} /> */}
                             <div className={styles.col_content_upper}>
                                 {t('header.superchinese')}
                             </div>
@@ -157,6 +163,7 @@ const Header = () => {
                 }}>
                     <div className={styles.col_content} onClick={() => { clickManuHeader("supertest") }}>
                         <div className={styles.col_content_content}>
+                            {/* <img src={suppertest.src} /> */}
                             <div className={styles.col_content_upper}>
                                 {t('header.supertest')}
                             </div>
@@ -166,7 +173,7 @@ const Header = () => {
                 <a href={commonConst.REDIRECT_URL}>
                     <div className={styles.col_content} onClick={() => { clickManuHeader("muagoivip") }}>
                         <div className={styles.col_content_content}>
-
+                            {/* <img src={shoppingcart.src} /> */}
                         </div><div className={styles.col_content_upper}>
                             {t('header.muagoivip')}
                         </div>
