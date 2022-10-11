@@ -29,8 +29,6 @@
     align-items: flex-end;
 }
 
-
-
 .subtitle_line {
     width: 300px;
     height: 10px;
@@ -59,12 +57,6 @@
             // height: 100%;
         }
 
-        // span{
-        //     img{
-
-        //     }
-        // }
-
         @media screen and (min-width: 1200px) {
             //do Smth
         }
@@ -91,7 +83,7 @@
             }
 
             @media screen and (max-width: 556px) {
-                width: 100%;
+                width: 60%;
                 left: 50%;
                 transform: translate(-50%, 0);
                 margin-top: 0px;
@@ -105,6 +97,9 @@
                 line-height: 60px;
                 text-transform: uppercase;
                 width: 300px;
+                @media screen and (max-width: 556px) {
+                    width: 100%;
+                }
                 text-align: center;
                 @media screen and (max-width: 992px) {
                     padding-top: 20px;
@@ -128,6 +123,12 @@
                 text-transform: uppercase;
                 border-radius: 30px;
                 margin: 15px auto;
+
+                h3{
+                    font-size: 16px;
+                    color: #E73D14;
+                    margin: 0px;
+                }
 
                 @media screen and (max-width: 1200px) {
                     display: none;
@@ -159,7 +160,7 @@
     .superchinese_introduce {
         margin: 20px 0px;
         flex-wrap: wrap;
-
+        padding: 0px 12px;
         width: 1320px;
         min-height: 250px;
 
@@ -180,7 +181,7 @@
         }
 
         @media screen and (max-width: 576px) {
-            width: 86%;
+            width: 100%;
             margin: 0px auto;
         }
         min-height: 500px;
@@ -241,6 +242,7 @@
         .superchinese_introduce_left {
             @extend .flex_column;
             @extend .flex_start;
+            padding: 30px 0px;
             width: 100%;
 
             @media screen and (max-width: 768px) {
@@ -257,6 +259,7 @@
         .superchinese_introduce_right {
             @extend .flex_column;
             @extend .flex_end;
+            padding: 30px 0px;
             width: 100%;
 
             @media screen and (max-width: 768px) {
@@ -284,24 +287,35 @@
         .superchinese_introduce_text_right {
             @extend .flex_column;
             @extend .flex_end;
+            padding: 20px 0;
+            .superchinese_introduce_subtitle{
+                text-align: right;
+                line-height: 24px;
+            }
         }
 
         .superchinese_introduce_title {
             font-weight: 600;
             font-size: 28px;
             padding: 20px 0;
+            @media screen and (max-width: 556px) {
+                font-size: 24px;
+            }
         }
 
         .superchinese_introduce_subtitle {
             font-weight: 400;
             font-size: 18px;
-            padding: 20px 0px;
+            @media screen and (max-width: 556px) {
+                font-size: 16px;
+            }
         }
     }
 
     .superchinese_subtitle {
         width: 1320px;
         min-height: 250px;
+        padding: 0px 12px;
         @extend .flex_column;
         @extend .flex_center;
 
@@ -322,7 +336,7 @@
         }
 
         @media screen and (max-width: 576px) {
-            width: 86%;
+            width: 100%;
             margin: 0px auto;
         }
 
@@ -331,6 +345,7 @@
             font-style: normal;
             font-size: 28px;
             text-align: center;
+            padding-bottom: 10px;;
         }
 
         .superchinese_subtitle_title_small {
@@ -339,6 +354,7 @@
             font-size: 34px;
             line-height: 50px;
             padding: 10px 0;
+            text-align: center;
         }
     }
 
@@ -348,6 +364,7 @@
         width: 100%;
         min-height: 180px;
         margin-top: 20px;
+        justify-content: flex-start;
 
         h3 {
             color: #fff;
@@ -355,6 +372,10 @@
             font-size: 28px;
             // padding: 20px 0;
             margin: 0px;
+        }
+
+        .superchinese_bottom_banner_text{
+            padding: 20px 0!important;
         }
 
         // .superchinese_bottom_banner_link_mobile {

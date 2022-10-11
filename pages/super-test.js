@@ -48,7 +48,7 @@ export default function SuperTest() {
                 <img src={topBanner.background} />
                 <div className={styles.super_chinese_banner_left_text}>
                     <h2>THE SMARTER HSK APPLICATION</h2>
-                    <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}>Tải ứng dụng</a>
+                    <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}><h3>Tải ứng dụng</h3></a>
                     <div className={styles.super_chinese_banner_link_mobile}>
                         <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} /></a>
                         <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconAndroid.background} /></a>

@@ -49,7 +49,7 @@ const en={
             itemTitle4:"Chủ đề sống động",
             itemSubTitle4:"Hiểu về ngữ cảnh nhanh hơn với sự trợ giúp của video hoạt hình và câu chuyện trực quan. Giúp bạn dễ dàng ghi nhớ từ đã học.",    
             itemTitle5:"Nội dung chất lượng",
-            itemSubTitle5:"Một cách độc đáo để biết chính xác trình độ tiếng Trung của bạn. Tùy chỉnh trải nghiệm học tập của bạn để giúp bạn nâng cao trình độ nhanh nhất.",  
+            itemSubTitle5:"Thưởng thức hơn 800 bài học, chia thành 12 cấp độ và dựa trên hơn 50 chủ đề thú vị. Ghi nhớ một cách dễ dàng thông qua việc nhắc lại bởi AI.",    
             itemTitle6:"",
             itemSubTitle6:"",  
         },

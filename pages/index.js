@@ -110,7 +110,7 @@ export default function Home() {
           <div className={styles.container_fluid}>
             <div className="row">
               <div className="col-md-12">
-                <div className="titlepage">
+                <div className={styles.titlepage}>
                   <h2>Chúng tôi đáp ứng nhiều nghành nghề</h2>
                 </div>
               </div>

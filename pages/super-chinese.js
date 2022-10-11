@@ -118,7 +118,7 @@ const SuperChinese = () => {
                 <img src={topBanner.background} />
                 <div className={styles.super_chinese_banner_left_text}>
                     <h2>{t('superchinese.titleTopBanner')}</h2>
-                    <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}>{t('superchinese.buttonTopBanner')}</a>
+                    <a className={styles.super_chinese_banner_button_download} href={superchineseConst.URL_DOWNLOAD}><h3>{t('superchinese.buttonTopBanner')}</h3></a>
                     <div className={styles.super_chinese_banner_link_mobile}>
                         <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} alt="icon top apple"/></a>
                         <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconApple.background} alt="icon top apple"/></a>
@@ -145,7 +145,7 @@ const SuperChinese = () => {
             <div className={styles.subtitle_line} ></div>
 
             <div className={styles.superchinese_bottom_banner} style={bottomBannerBackground}>
-                <h3>{t('superchinese.bottomTitle')}</h3>
+                <h3 className={styles.superchinese_bottom_banner_text}>{t('superchinese.bottomTitle')}</h3>
                 <div className={styles.superchinese_bottom_banner_link_mobile}>
                     <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_IOS}><img src={topIconApple.background} alt="icon apple"/></a>
                     <a target="_blank" rel="noopener noreferrer" href={superchineseConst.URL_DOWNLOAD_APP_ANDROID}><img src={topIconAndroid.background} alt="icon android"/></a>
