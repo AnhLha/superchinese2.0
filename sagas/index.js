@@ -8,7 +8,6 @@ const watchAndLog = function* () {
   while (true) {
     const action = yield take("*");
     const state = yield select();
-    //console.log('action', action);
   }
 };
 

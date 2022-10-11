@@ -1,7 +1,9 @@
 import { memo } from "react";
-import { kithiHSKConst } from "../constants";
+import { kithiHSKConst, commonConst } from "../constants";
 import styles from "../assets/styles/thithuhsk.module.scss";
+import { useHeaderStyle } from "../customeHook";
 const KiThiHSK = () => {
+    useHeaderStyle(commonConst.MENU_BLUE);
 
     function hskOnline() {
         return {__html: kithiHSKConst.IFRAME};
